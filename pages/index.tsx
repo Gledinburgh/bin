@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Grid from '../Components/Grid'
 import styles from '../styles/Home.module.css'
 import { GeneralContext } from '../Context/GeneralContext'
 
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
+        <Grid />
 
       </main>
 
