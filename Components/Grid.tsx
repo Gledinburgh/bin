@@ -1,9 +1,12 @@
 import { NextComponentType } from "next";
+import BinMapped from "./BinMapped";
 
 import styles from '../styles/Grid.module.css'
 
 
-const Grid: NextComponentType = () => {
+const Grid = ({ modalSwitch }: { modalSwitch: Function }) => {
+
+
 
   function nextChar(c: string) {
     return String.fromCharCode(c.charCodeAt(0) + 1);
@@ -19,50 +22,53 @@ const Grid: NextComponentType = () => {
     return letters;
   }
 
-  return (
+  const numberArray: any = (size: number) => {
+    var numbers: number[] = [];
+    var currentNumber = 1;
 
+    for (let i = 0; i < size; i++) {
+      numbers.push(currentNumber)
+      currentNumber++
+    }
+    return numbers;
+  }
+
+  const actorCoords: any = {
+    i6: <BinMapped modalSwitch={modalSwitch} />,
+    h9: <img src="./mockup/dude.png" alt="image of Bin" id={styles.dude} className={styles.actor} />
+  };
+
+  return (
 
     <table className={styles["grid-container"]}>
 
       {
-        letterArray(5).map((char: string) => {
+        letterArray(10).map((char: string) => {
           return (
             <tr key={char} className={styles.col}>
               {
-                [1, 2, 3, 4, 5].map((num) => {
+                numberArray(10).map((num: number) => {
 
-                  if ((char + num) === "d3") {
+                  var currentCoord: string = char + num;
+                  if (actorCoords[`${currentCoord}`]) {
                     return (
-                      <td style={{ position: "relative" }}>
-                        <img src="./mockup/bin.png" alt="image of Bin"
-                          id={styles.bin} className={styles.actor} />
-                      </td>
-                    )
-                  }
-                  if ((char + num) === "d4") {
-                    return (
-                      <td style={{ position: "relative" }}>
-                        <img src="./mockup/dude.png" alt="image of Bin"
-                          id={styles.dude} className={styles.actor} />
+                      <td key={char + num} style={{ position: "relative" }}>
+                        {actorCoords[currentCoord]}
                       </td>
                     )
                   }
                   else {
-
                     return (
-                      <td>
-                        {char + num}
+                      <td key={currentCoord}>
+                        {currentCoord}
                       </td>
                     )
                   }
-                }
-                )
+                })
               }
             </tr>
           )
-
-        })
-      }
+        })}
     </table>
   )
 

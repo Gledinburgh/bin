@@ -1,0 +1,36 @@
+.modal{
+  overflow-y: scroll;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(250, 235, 215, 0.788);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+}
+
+.modal-content {
+  max-height: 100vh;
+  padding: 15px;
+  max-width: 600px;
+  font-size: small;
+
+}
+
+.modal-text-box {
+  background-color: rgba(240, 248, 255, 0.733);
+  border: min(1vw, .5vh )dashed black;
+  margin-top: 20px;
+}
+
+.modal-text-box-body{
+  padding: 10px;
+  width: 100%;
+
+}
+
+

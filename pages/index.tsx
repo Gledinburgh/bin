@@ -4,13 +4,22 @@ import Image from 'next/image'
 import Grid from '../Components/Grid'
 import styles from '../styles/Home.module.css'
 import { GeneralContext } from '../Context/GeneralContext'
+import Modal from '../Components/Layout/Modal'
+import { useState, useEffect } from 'react'
 
 
 const Home: NextPage = () => {
 
   const context = GeneralContext();
+  const [modalVisability, setModalVisability] = useState(false);
 
+  function toggleModalVisability(e: React.SyntheticEvent<HTMLElement>): void {
+    setModalVisability(!modalVisability)
+  }
 
+  useEffect(() => {
+    console.log("useEffect: index.js")
+  }, [modalVisability])
   return (
     <div className={styles.container}>
       <Head>
@@ -21,10 +30,11 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Bin
         </h1>
 
-        <Grid />
+        <Modal visability={modalVisability} modalSwitch={toggleModalVisability} activeActor={"test"} />
+        <Grid modalSwitch={toggleModalVisability} />
 
       </main>
 

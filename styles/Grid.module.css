@@ -1,12 +1,11 @@
 .col > td {
-width: 100px;
-height: 100px;
 outline: rgba(0, 0, 0, 0.13) solid 1px;
 text-align: center;
 }
 
 .grid-container {
   width: 500px;
+  height: 500px;
   background-image: url('/mockup/wall.png');
 }
 
@@ -16,10 +15,13 @@ text-align: center;
 }
 
 #bin {
+
   width: 150px;
-  left: 5px;
-  top: 45px;
+  bottom: 0
+
+
 }
+
 
 #dude {
   width: 70px;
