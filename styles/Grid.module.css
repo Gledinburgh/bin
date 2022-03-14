@@ -7,6 +7,7 @@ text-align: center;
   width: 500px;
   height: 500px;
   background-image: url('/mockup/wall.png');
+  overflow-x: scroll !important;
 }
 
 .actor{
@@ -14,16 +15,30 @@ text-align: center;
 
 }
 
+#pet-shop-door {
+  bottom: 15px
+}
+
 #bin {
-
-  width: 150px;
   bottom: 0
+}
 
-
+#bin[data-attention='1'] {
+  animation: bounce-7 1s 1;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
 }
 
 
 #dude {
-  width: 70px;
   bottom: -30px;
+}
+
+@keyframes bounce-7 {
+  0%   { transform: scale(1,1)      translateY(0); }
+  10%  { transform: scale(1.1,.9)   translateY(0); }
+  30%  { transform: scale(.9,1.1)   translateY(-30px); }
+  50%  { transform: scale(1.05,.95) translateY(0); }
+  57%  { transform: scale(1,1)      translateY(-3px); }
+  64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
 }
