@@ -28,7 +28,7 @@ const Actor = ({ modalSwitch, scale, actorDetails }: { modalSwitch: Function, sc
 
   function applyScaleToCoord(coords: number[], scale: number): number[] {
     return coords.map((point) => {
-      return point / scale;
+      return point * scale;
     })
   }
 
@@ -41,6 +41,7 @@ const Actor = ({ modalSwitch, scale, actorDetails }: { modalSwitch: Function, sc
     document.body.style.cursor = isMouseOver ? "pointer" : "default"
 
     console.log("useEfect: Actor")
+    console.log("useEfect: Actor", scale)
 
     var baseCoordinates = actorDetails.map.areas[0].coords
     var newCoordinates = applyScaleToCoord(baseCoordinates, scale)
@@ -50,7 +51,15 @@ const Actor = ({ modalSwitch, scale, actorDetails }: { modalSwitch: Function, sc
 
     return () => clearInterval(interval)
 
+
   }, [scale, isMouseOver])
+
+  function calculateWidth(scale: number) {
+    //return actorDetails.baseWidth * scale;
+    return actorDetails.baseWidth * scale
+
+
+  }
 
 
   const divRef = useRef<HTMLDivElement>() as any;
@@ -62,7 +71,7 @@ const Actor = ({ modalSwitch, scale, actorDetails }: { modalSwitch: Function, sc
 
   return (
     <div className={styles.actor} id={styles[actorDetails.id]} onAnimationEnd={() => setIsAttention('0')} data-attention={isAttention} >
-      <ImageMapper onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseOver} onClick={onClickHandler} containerRef={divRef} width={actorDetails.baseWidth / scale} imgWidth={actorDetails.baseWidth / scale} src={URL} map={MAP} />
+      <ImageMapper onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseOver} onClick={onClickHandler} containerRef={divRef} width={calculateWidth(scale)} imgWidth={calculateWidth(scale)} src={URL} map={MAP} />
     </div>
 
   )

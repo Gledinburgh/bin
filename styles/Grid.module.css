@@ -1,12 +1,22 @@
 .col > td {
 outline: rgba(0, 0, 0, 0.13) solid 1px;
 text-align: center;
+
+}
+
+.coord {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.411);
+
+
+
 }
 
 .grid-container {
-  width: 500px;
-  height: 500px;
+  width: 1000px;
+  height: 1000px;
   background-image: url('/mockup/wall.png');
+  background-size: cover;
   overflow-x: scroll !important;
 }
 
@@ -16,11 +26,10 @@ text-align: center;
 }
 
 #pet-shop-door {
-  bottom: 15px
+  top: 30%
 }
 
 #bin {
-  bottom: 0
 }
 
 #bin[data-attention='1'] {
@@ -41,4 +50,65 @@ text-align: center;
   57%  { transform: scale(1,1)      translateY(-3px); }
   64%  { transform: scale(1,1)      translateY(0); }
   100% { transform: scale(1,1)      translateY(0); }
+}
+@media (min-width: 300px) {
+
+  .grid-container {
+    width: 300px;
+    height: 300px;
+
+  }
+}
+@media (min-width: 400px) {
+
+  .grid-container {
+    width: 400px;
+    height: 400px;
+
+  }
+}
+
+@media (min-width: 500px) {
+
+  .grid-container {
+    width: 500px;
+    height: 500px;
+
+  }
+}
+
+@media (min-width: 600px) {
+
+  .grid-container {
+    width: 600px;
+    height: 600px;
+
+  }
+}
+@media (min-width: 850px) {
+
+  .grid-container {
+    width: 800px;
+    height: 800px;
+
+  }
+}
+
+ @media (min-width: 1000px) {
+
+  .grid-container {
+    width: 1000px;
+    height: 1000px;
+
+  }
+}
+
+
+@media (min-width: 2000px) {
+
+  .grid-container {
+    width: 1500px;
+    height: 1500px;
+
+  }
 }
