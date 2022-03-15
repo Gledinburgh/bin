@@ -4,21 +4,13 @@ import { Row, Col } from 'antd'
 
 const Header = () => {
   return (
-    <Row className={styles.header}>
-      <Col span={5}>
-        <h1 className={styles.title}>
-          Bin
-        </h1>
+    <Row justify='start' align='middle'>
+      <Col span={5} className={styles["title"]}>
+        <h1 id={styles["title"]} style={{ margin: 0 }}>Bin</h1>
       </Col>
       <Col span={19}>
-        <nav>
-          <ul id={styles.nav}>
-            <li>Shop</li>
-            |
-            <li>About</li>
-            |
-            <li>Instagram</li>
-          </ul>
+        <nav className={styles["nav"]}>
+          <a>shop</a> | about | instagram
         </nav>
       </Col>
     </Row>

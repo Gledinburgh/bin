@@ -43,12 +43,12 @@ const Modal = ({ visability, modalSwitch, activeActor }: { visability: boolean, 
 
       <div ref={modalRef} onClick={e => e.stopPropagation()} className={styles["modal-content"]}>
 
-        <Row className={styles["modal-Header"]}>
-          <Col span={23} className={styles["modal-title"]}>
-            <h4>Modal Title</h4>
+        <Row justify='center' align='middle' className={styles["modal-Header"]}>
+          <Col span={20} className={styles["modal-title"]}>
+            <h4></h4>
           </Col>
-          <Col span={1}>
-            <button onClick={modalSwitch}>X</button>
+          <Col span={3}>
+            <button className={styles["modal-button"]} onClick={modalSwitch}>X</button>
           </Col>
         </Row>
 

@@ -97,9 +97,9 @@ const Grid = ({ modalSwitch }: { modalSwitch: Function }) => {
 
   const actorCoords: any = {
     //i6: <BinMapped modalSwitch={modalSwitch} />,
-    g6: CreateActor(Bin),
+    g5: CreateActor(Bin),
     // h9: <img src="./mockup/dude.png" alt="image of Bin" id={styles.dude} className={styles.actor} />,
-    i10: CreateActor(JunkYardDude),
+    i9: CreateActor(JunkYardDude),
     d6: CreateActor(Poster),
     e2: CreateActor(PetShopDoor),
   };

@@ -13,6 +13,7 @@ text-align: center;
 }
 
 .grid-container {
+  min-width: 300px;
   width: 1000px;
   height: 1000px;
   background-image: url('/mockup/wall.png');

@@ -38,9 +38,7 @@ const Home: NextPage = () => {
         <Row>
           <Col>
             <Header />
-            <Row className={styles["scroll-x"]}>
-              <Grid modalSwitch={toggleModalVisability} />
-            </Row>
+            <Grid modalSwitch={toggleModalVisability} />
           </Col>
 
         </Row>
