@@ -6,6 +6,9 @@ import React, {
   useContext
 } from 'react';
 
+import { scales } from '../data/mediaQueries'
+
+
 const defaultValue = {}
 
 const BreakpointContext = createContext(defaultValue);
@@ -64,11 +67,46 @@ const BreakpointProvider = ({ children, queries }: { children: any, queries: any
 
 }
 
-function useBreakpoint() {
+function filterLargestQuery(context: any): number {
+
+  let queryList = Object.keys(context);
+
+
+  let queries = []
+  for (let i = 0; i < queryList.length; i++) {
+    let media = queryList[i];
+    if (context[media]) {
+      queries.push(Number(media))
+    }
+  }
+
+  let sorted = queries.sort((a: number, b: number) => {
+    return b - a
+  })
+
+  var key: string = String(sorted[0]);
+  if (scales[key]) {
+    let scale: number = scales[key]
+    return scale
+  }
+
+
+
+  else {
+    console.log("default scale")
+    let scale = 3 / 10
+    return scale
+
+  }
+
+
+}
+
+function getScale() {
   const context = useContext(BreakpointContext);
   if (context === defaultValue) {
     throw new Error('useBreakpoint must be used within BreakpointProvider');
   }
-  return context;
+  return filterLargestQuery(context);
 }
-export { useBreakpoint, BreakpointProvider };
+export { getScale, BreakpointProvider };

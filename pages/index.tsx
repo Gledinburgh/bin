@@ -35,7 +35,7 @@ const Home: NextPage = () => {
 
 
         <Modal visability={modalVisability} modalSwitch={toggleModalVisability} activeActor={"test"} />
-        <Row>
+        <Row id="main-content-container">
           <Col>
             <Header />
             <Grid modalSwitch={toggleModalVisability} />

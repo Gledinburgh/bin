@@ -11,7 +11,6 @@ const Modal = ({ visability, modalSwitch, activeActor }: { visability: boolean, 
   const modalRef: any = useRef(null);
 
   function closeOnEscapeDown(e: any) {
-    console.log("escape Pressed")
 
     if (visability && (e.key === "Escape")) {
       modalSwitch(e);
@@ -19,7 +18,6 @@ const Modal = ({ visability, modalSwitch, activeActor }: { visability: boolean, 
   }
 
   useEffect(() => {
-    console.log("useEffect: Modal")
     if (visability) {
       document.body.addEventListener('keydown', closeOnEscapeDown)
       // document.body.style.overflow = 'hidden'

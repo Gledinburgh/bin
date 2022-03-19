@@ -52,6 +52,16 @@ text-align: center;
   64%  { transform: scale(1,1)      translateY(0); }
   100% { transform: scale(1,1)      translateY(0); }
 }
+
+@media (max-width: 300px) {
+
+  .grid-container {
+    width: 300px;
+    height: 300px;
+
+  }
+}
+
 @media (min-width: 300px) {
 
   .grid-container {
@@ -108,8 +118,8 @@ text-align: center;
 @media (min-width: 2000px) {
 
   .grid-container {
-    width: 1500px;
-    height: 1500px;
+    width: 2000px;
+    height: 2000px;
 
   }
 }

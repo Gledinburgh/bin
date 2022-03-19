@@ -17,13 +17,11 @@ const BinMapped = ({ modalSwitch }: { modalSwitch: Function }) => {
     coords: [15 / scale, 106 / scale, 23 / scale, 247 / scale, 148 / scale, 299 / scale, 367 / scale, 205 / scale, 355 / scale, 68 / scale, 270 / scale, 18 / scale]
   }]
 
-  console.log("binMapped.tsx")
 
   const MAP = {
     "name": 'my-map',
     "areas": areas
   };
-  console.log("Map: ", MAP)
 
   function onClickHandler(area: CustomArea, index: number, event: AreaEvent) {
     modalSwitch();
