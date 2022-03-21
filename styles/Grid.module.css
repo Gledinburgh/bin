@@ -99,8 +99,8 @@ text-align: center;
 @media (min-width: 850px) {
 
   .grid-container {
-    width: 800px;
-    height: 800px;
+    width: 650px;
+    height: 650px;
 
   }
 }
@@ -108,8 +108,8 @@ text-align: center;
  @media (min-width: 1000px) {
 
   .grid-container {
-    width: 1000px;
-    height: 1000px;
+    width: 750px;
+    height: 750px;
 
   }
 }
@@ -118,8 +118,8 @@ text-align: center;
 @media (min-width: 2000px) {
 
   .grid-container {
-    width: 2000px;
-    height: 2000px;
+    width: 800px;
+    height: 800px;
 
   }
 }

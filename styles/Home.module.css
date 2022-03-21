@@ -58,7 +58,11 @@
 @media (min-width: 850px) {
 
   #title {
-    font-size: 4.5em;
+    font-size: 5em;
+  }
+  #nav {
+    font-size: 2.75em;
+
   }
 
 }
@@ -87,12 +91,12 @@
 
     @media (min-width: 1000px) {
       #nav {
-        font-size: 4em;
+        font-size: 2.5em;
 
       }
 
       #title {
-        font-size: 7em;
+        font-size: 6.5em;
       }
 
 
@@ -100,11 +104,11 @@
 
     @media (min-width: 2000px) {
       #nav {
-        font-size: 6em;
+        font-size: 3.5em;
       }
 
       #title {
-        font-size: 15em;
+        font-size: 5em;
       }
 
 
