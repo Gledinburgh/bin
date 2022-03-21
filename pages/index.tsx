@@ -14,10 +14,13 @@ const Home: NextPage = () => {
 
   const context = GeneralContext();
   const [modalVisability, setModalVisability] = useState(false);
+  const [activeActor, setActiveActor] = useState('')
 
   function toggleModalVisability(e: React.SyntheticEvent<HTMLElement>): void {
     setModalVisability(!modalVisability)
   }
+
+
 
   useEffect(() => {
     console.log("useEffect: index.js")
@@ -34,7 +37,10 @@ const Home: NextPage = () => {
 
 
 
-        <Modal visability={modalVisability} modalSwitch={toggleModalVisability} activeActor={"test"} />
+        <Modal
+          visability={modalVisability}
+          modalSwitch={toggleModalVisability}
+          activeActor={activeActor} />
         <Row id="main-content-container">
           <Col>
             <Header />

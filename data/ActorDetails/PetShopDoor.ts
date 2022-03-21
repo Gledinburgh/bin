@@ -3,6 +3,7 @@ import { actorDetails } from "../../types";
 export const PetShopDoor: actorDetails = {
   "name": "PetShopDoor",
   "id": "pet-shop-door",
+  "modal": "petShop",
   "imgUrl": "./mockup/petshop-door.png",
   "baseWidth": 240,
   "baseHeight": 452,

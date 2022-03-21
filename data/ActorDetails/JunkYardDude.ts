@@ -3,6 +3,7 @@ import { actorDetails } from "../../types";
 export const JunkYardDude: actorDetails = {
   "name": "JunkYardDude",
   "id": "dude",
+  "modal": "scrapYard",
   "imgUrl": "./mockup/dude.png",
   "baseWidth": 161,
   "baseHeight": 436,

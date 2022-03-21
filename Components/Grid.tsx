@@ -7,15 +7,17 @@ import { Poster } from "../data/ActorDetails/Poster"
 
 import styles from '../styles/Grid.module.css'
 import { actorDetails } from "../types";
-import { useEffect, useImperativeHandle, useState } from "react";
+import { useEffect } from "react";
 
 import { getScale } from '../Context/MediaQuery'
 import { map2DArray } from '../Utility/gridUtility'
-import { scales } from '../data/mediaQueries'
 
 
 
-const Grid = ({ modalSwitch }: { modalSwitch: Function }) => {
+const Grid = (
+  { modalSwitch }:
+    { modalSwitch: Function }
+) => {
 
   //Get's scale based off of media query
   const scale: any = getScale();
@@ -24,7 +26,10 @@ const Grid = ({ modalSwitch }: { modalSwitch: Function }) => {
 
   function CreateActor(actorDetails: actorDetails) {
     return (
-      <Actor modalSwitch={modalSwitch} scale={scale} actorDetails={actorDetails} />
+      <Actor
+        modalSwitch={modalSwitch}
+        scale={scale}
+        actorDetails={actorDetails} />
     )
   }
 

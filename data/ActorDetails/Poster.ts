@@ -3,6 +3,7 @@ import { actorDetails } from "../../types";
 export const Poster: actorDetails = {
   "name": "Poster",
   "id": "poster",
+  "modal": "carnival",
   "imgUrl": "./mockup/poster.png",
   "baseWidth": 230,
   "baseHeight": 271,

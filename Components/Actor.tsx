@@ -4,11 +4,20 @@ import styles from '../styles/Grid.module.css'
 import { useEffect, useState, useRef } from 'react'
 import { devNull } from 'os';
 import { actorDetails } from '../types';
+import { GeneralContext } from '../Context/GeneralContext';
 
 
 
-const Actor = ({ modalSwitch, scale, actorDetails }: { modalSwitch: Function, scale: number, actorDetails: actorDetails }) => {
+const Actor = (
+  { modalSwitch, scale, actorDetails }:
+    {
+      modalSwitch: Function,
+      scale: number,
+      actorDetails: actorDetails,
+    }
+) => {
 
+  const context = GeneralContext();
 
   var [MAP, setMAP] = useState({ ...actorDetails.map })
   var [isMouseOver, setIsMouseOver] = useState(false)
@@ -66,12 +75,19 @@ const Actor = ({ modalSwitch, scale, actorDetails }: { modalSwitch: Function, sc
   const URL = actorDetails.imgUrl;
 
   function onClickHandler(area: CustomArea, index: number, event: AreaEvent) {
+    context.handleActorChange(actorDetails.modal);
     modalSwitch();
   }
 
   return (
     <div className={styles.actor} id={styles[actorDetails.id]} onAnimationEnd={() => setIsAttention('0')} data-attention={isAttention} >
-      <ImageMapper onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseOver} onClick={onClickHandler} containerRef={divRef} width={calculateWidth(scale)} imgWidth={calculateWidth(scale)} src={URL} map={MAP} />
+      <ImageMapper
+        onMouseLeave={handleMouseLeave}
+        onMouseEnter={handleMouseOver}
+        onClick={onClickHandler}
+        containerRef={divRef}
+        width={calculateWidth(scale)}
+        imgWidth={calculateWidth(scale)} src={URL} map={MAP} />
     </div>
 
   )

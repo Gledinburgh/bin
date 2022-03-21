@@ -1,12 +1,34 @@
 import styles from '../../styles/Modal.module.css'
 import { Row, Col } from 'antd'
 import TestContent from '../TestContent'
-import { SyntheticEvent, useEffect, useRef } from 'react';
+import { GeneralContext } from '../../Context/GeneralContext'
+import ScrapyardContent from '../ModalContent/ScrapyardContent'
+import CarnivalContent from '../ModalContent/CarnivalContent'
+import { SyntheticEvent, useEffect, useRef, useState } from 'react';
 
 
-const Modal = ({ visability, modalSwitch, activeActor }: { visability: boolean, modalSwitch: (e: SyntheticEvent<HTMLElement>) => void, activeActor: string }) => {
+const Modal = ({ visability, modalSwitch }: { visability: boolean, modalSwitch: (e: SyntheticEvent<HTMLElement>) => void, activeActor: string }) => {
 
-  const content = <TestContent />;
+  // const content = <ScrapyardContent />;
+  const context = GeneralContext()
+  const [content, setContent] = useState(<ScrapyardContent />);
+  // const [currentActor, setCurrentActor] = useState("");
+
+  const contentMap: any = {
+    "scrapYard": <ScrapyardContent />,
+    "carnival": <CarnivalContent />,
+    "test": <TestContent />
+  }
+
+  function handleContentChange(activeActor: string) {
+
+    console.log("modal.tsx: handleContentChange fired", activeActor)
+
+    let content: any = contentMap[activeActor];
+    if (content) setContent(content)
+    if (!content) setContent(contentMap["test"])
+
+  }
 
   const modalRef: any = useRef(null);
 
@@ -18,17 +40,20 @@ const Modal = ({ visability, modalSwitch, activeActor }: { visability: boolean, 
   }
 
   useEffect(() => {
+    console.log("useEffect: Modal")
     if (visability) {
       document.body.addEventListener('keydown', closeOnEscapeDown)
-      // document.body.style.overflow = 'hidden'
-      // modalRef.current.style.overflow = 'unset'
+    }
+    if (context.activeActor) {
+      handleContentChange(context.activeActor)
     }
 
     return function cleanup() {
       document.body.removeEventListener('keydown', closeOnEscapeDown)
-      // document.body.style.overflow = 'unset'
     }
-  }, [visability])
+
+
+  }, [visability, context.activeActor])
 
 
   if (!visability) {

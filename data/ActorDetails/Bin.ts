@@ -3,6 +3,7 @@ import { actorDetails } from "../../types";
 export const Bin: actorDetails = {
   "name": "Bin",
   "id": "bin",
+  "modal": "park",
   "imgUrl": "./mockup/bin.png",
   "baseWidth": 356,
   "baseHeight": 290,
