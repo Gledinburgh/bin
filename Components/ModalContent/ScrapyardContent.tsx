@@ -7,7 +7,7 @@ const ScrapyardContent = () => {
     <div>
       <Row justify="space-between" align="middle">
         {/* <Col className={styles["modal-img"]} span={10}> */}
-        <img style={{ width: "100%" }} src='./mockup/scrap-yard.png'></img>
+        <img style={{ width: "100%" }} src='./ModalContent/ScrapYard/scrap-yard.png'></img>
         {/* </Col> */}
         <div className={styles["modal-intro-container"]}>
           <Row className={styles["into-placeholder"]}></Row>

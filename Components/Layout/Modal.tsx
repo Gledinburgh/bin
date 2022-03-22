@@ -4,6 +4,7 @@ import TestContent from '../TestContent'
 import { GeneralContext } from '../../Context/GeneralContext'
 import ScrapyardContent from '../ModalContent/ScrapyardContent'
 import CarnivalContent from '../ModalContent/CarnivalContent'
+import ParkContent from '../ModalContent/ParkContent'
 import { SyntheticEvent, useEffect, useRef, useState } from 'react';
 
 
@@ -17,6 +18,7 @@ const Modal = ({ visability, modalSwitch }: { visability: boolean, modalSwitch: 
   const contentMap: any = {
     "scrapYard": <ScrapyardContent />,
     "carnival": <CarnivalContent />,
+    "park": <ParkContent />,
     "test": <TestContent />
   }
 
