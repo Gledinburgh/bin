@@ -5,7 +5,7 @@ export const Bin: actorDetails = {
   "id": "bin",
   "modal": "park",
   "imgUrl": "./mockup/bin.png",
-  "baseWidth": 356,
+  "baseWidth": 430,
   "baseHeight": 290,
   "map": {
     "name": "binMap",

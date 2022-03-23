@@ -40,7 +40,8 @@ text-align: center;
 
 
 #dude {
-  bottom: -30px;
+  bottom: -30%;
+  left: 15%;
 }
 
 @keyframes bounce-7 {

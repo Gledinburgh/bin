@@ -34,9 +34,9 @@ const Grid = (
   }
 
   const actorCoords: any = {
-    g5: CreateActor(Bin),
+    f5: CreateActor(Bin),
     i9: CreateActor(JunkYardDude),
-    d6: CreateActor(Poster),
+    c6: CreateActor(Poster),
     e2: CreateActor(PetShopDoor),
   };
 
