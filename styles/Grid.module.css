@@ -118,8 +118,8 @@ text-align: center;
 @media (min-width: 2000px) {
 
   .grid-container {
-    width: 800px;
-    height: 800px;
+    width: 1200px;
+    height: 1200px;
 
   }
 }

@@ -15,7 +15,7 @@ export const scales: any = {
   "600": 3 / 5,
   "850": .65,
   "1000": .75,
-  "2000": .8,
+  "2000": 1.2,
 }
 
 // export const queries = {

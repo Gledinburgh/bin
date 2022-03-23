@@ -11,7 +11,7 @@ const Header = () => {
       <Col span={19}>
         <nav id={styles["nav"]}>
           <span>
-            <a>shop</a> | about | instagram
+            <a>shop</a> | <a>about</a> | <a>instagram</a>
           </span>
         </nav>
       </Col>
