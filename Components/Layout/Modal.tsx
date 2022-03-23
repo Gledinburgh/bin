@@ -5,6 +5,7 @@ import { GeneralContext } from '../../Context/GeneralContext'
 import ScrapyardContent from '../ModalContent/ScrapyardContent'
 import CarnivalContent from '../ModalContent/CarnivalContent'
 import ParkContent from '../ModalContent/ParkContent'
+import PetShopContent from '../ModalContent/PetShopContent'
 import { SyntheticEvent, useEffect, useRef, useState } from 'react';
 
 
@@ -19,7 +20,8 @@ const Modal = ({ visability, modalSwitch }: { visability: boolean, modalSwitch: 
     "scrapYard": <ScrapyardContent />,
     "carnival": <CarnivalContent />,
     "park": <ParkContent />,
-    "test": <TestContent />
+    "test": <TestContent />,
+    "petShop": <PetShopContent />
   }
 
   function handleContentChange(activeActor: string) {
