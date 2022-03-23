@@ -213,7 +213,8 @@
 #coming-soon{
   position: absolute;
   right: 0;
-  width: 100%;
+  top: 10%;
+  width: 40%;
 }
 
 #terrarium {
