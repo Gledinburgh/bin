@@ -4,6 +4,7 @@ import { Bin } from "../data/ActorDetails/Bin"
 import { JunkYardDude } from "../data/ActorDetails/JunkYardDude"
 import { PetShopDoor } from "../data/ActorDetails/PetShopDoor"
 import { Poster } from "../data/ActorDetails/Poster"
+import { Awning } from "../data/ActorDetails/Awning";
 
 import styles from '../styles/Grid.module.css'
 import { actorDetails } from "../types";
@@ -18,6 +19,8 @@ const Grid = (
   { modalSwitch }:
     { modalSwitch: Function }
 ) => {
+
+
 
   //Get's scale based off of media query
   const scale: any = getScale();
@@ -35,9 +38,10 @@ const Grid = (
 
   const actorCoords: any = {
     f5: CreateActor(Bin),
+    b1: CreateActor(Awning),
     i9: CreateActor(JunkYardDude),
-    c6: CreateActor(Poster),
-    e2: CreateActor(PetShopDoor),
+    d6: CreateActor(Poster),
+    d1: CreateActor(PetShopDoor),
   };
 
   useEffect(() => {

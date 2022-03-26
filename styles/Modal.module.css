@@ -7,9 +7,28 @@
   bottom: 0;
   background-color: rgba(250, 235, 215, 0.788);
   display: flex;
-  align-items: center;
+  /* align-items: start; */
   justify-content: center;
   z-index: 1000;
+  animation: fade-in .75s;
+
+}
+
+@keyframes fade-in {
+  0% {
+opacity:  0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes scroll-in {
+
+  0% {transform: translateY(-100%);}
+  30% {transform: translateY(5%);}
+  85% {transform: translateY(0%);}
+
 
 }
 
@@ -18,11 +37,13 @@
 }
 
 .modal-content {
+
   max-height: 100vh;
   padding: 3%;
   max-width: 1500px;
   min-width: 300px;
   font-size: small;
+  animation: scroll-in 2s;
 
 }
 
@@ -33,15 +54,20 @@
   width: max(4vw, 4vh);
   min-width: 40px;
   min-height: 40px;
+  margin-top: 100%;
+  margin-bottom: 100%;
   height: max(4vw, 4vh);
 }
 
 
 
 .modal-text-box, .modal-intro {
-  background-color: rgba(240, 248, 255, 0.733);
-  border: min(1vw, .5vh )dashed black;
+  background: rgb(255, 255, 255);
   margin-bottom: 40px;
+}
+
+.modal-text-box {
+    border: min(1vw, .5vh )dashed black;
 
 }
 
@@ -51,13 +77,24 @@
 
 .modal-intro-container{
   position: relative;
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
   width: 100%;
+  border: none;
 }
 
 .modal-intro {
+  /* background: rgb(255, 255, 255); */
+  border: none;
+  background-image: url('/mockup/crumpled-paper.jpg');
+  object-fit: contain;
+  background-size:cover;
+background-repeat: no-repeat;
+
   display: block;
   position: relative;
   width: 100%;
+  clip-path: polygon(20% 0%, 0 0, 2% 28%, 1% 64%, 0 99%, 57% 98%, 100% 100%, 100% 78%, 99% 53%, 100% 20%, 100% 0, 48% 5%);
+  padding: 5%;
 }
 
 
@@ -121,7 +158,6 @@
   }
   .modal-text-box, .modal-intro {
     background-color: rgba(240, 248, 255, 0.733);
-    border: min(.2vw, .2vh )dashed black;
     margin-bottom: 40px;
 
   }
