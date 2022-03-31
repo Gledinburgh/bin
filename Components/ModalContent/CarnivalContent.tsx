@@ -1,46 +1,69 @@
 import { Row, Col } from 'antd'
 import styles from '../../styles/Modal.module.css'
+import { CarnivalDetails } from '../../data/ModalDetails/carnivalDetails'
+
+const { rollerCoaster, tent, carousel, farisWheel } = CarnivalDetails
+
+const RowSettings: any = {
+  justify: "space-between",
+  align: "middle"
+}
+
+const imageColSettings: any = {
+  className: styles["modal-img"],
+  span: 10
+}
+
+const textColSettings: any = {
+  className: styles["modal-text-box"],
+  span: 12
+}
+
+
 
 const CarnivalContent = () => {
   return (
 
     <div>
-      <Row justify="space-between" align="middle">
-        <Col className={styles["modal-img"]} span={10}>
-          <img style={{ width: "100%" }} src='./mockup/race-track.png'></img>
+      <Row {...RowSettings}>
+        <Col {...imageColSettings}>
+          <img style={{ width: "100%" }} src={rollerCoaster.img} alt={rollerCoaster.alt}></img>
         </Col>
-        <Col className={styles["modal-text-box"]} span={12}>
-          <Row justify='center'> Subtitle</Row>
-          <Row className={styles["modal-text-box-body"]}>he demonstrative pronouns ini and iti (and their respective forms) both mean "this", but each has distinct uses. Iti usually refers to something abstract, but may also refer to concrete nouns: iting musika (this music), iti ing gagawan mi (this is what we do). </Row>
+        <Col {...textColSettings}>
+          <Row justify='center'><b>{rollerCoaster.title}</b></Row>
+          <Row className={styles["modal-text-box-body"]}>{rollerCoaster.description} </Row>
         </Col>
       </Row >
 
-      <Row justify="space-between" align="middle">
-        <Col className={styles["modal-text-box"]} span={12}>
-          <Row justify='center'> Subtitle</Row>
-          <Row className={styles["modal-text-box-body"]}> distinct uses. Iti usually refers to something abstract, but may also refer to concrete nouns: iting musika (this music), iti ing gagawan mi (this is  </Row>
+      <Row {...RowSettings}>
+        <Col {...textColSettings}>
+          <Row justify='center'><b>{tent.title}</b></Row>
+          <Row className={styles["modal-text-box-body"]}> {tent.description} </Row>
         </Col>
-        <Col span={10}>
-          <img style={{ width: "100%" }} src='./mockup/tent.png'></img>
+        <Col {...imageColSettings}>
+          <img style={{ width: "100%" }} src={tent.img} alt={tent.alt}></img>
         </Col>
       </Row>
 
-      <Row justify="space-between" align="middle">
-        <Col className={styles["modal-img"]} span={10}>
-          <img style={{ width: "100%" }} src='./mockup/carousel.png'></img>
+      <Row {...RowSettings}>
+        <Col {...imageColSettings}>
+          <img style={{ width: "100%" }} src={carousel.img}></img>
         </Col>
-        <Col className={styles["modal-text-box"]} span={12}>
-          <Row justify='center'> Subtitle</Row>
-          <Row className={styles["modal-text-box-body"]}>he demonstrative pronouns ini and iti (and their respective forms) both mean "this", but each has distinct uses. Iti usually refers to something abstract, but may also refer to concrete nouns: iting musika (this music), iti ing gagawan mi (this is what we do). </Row>
+        <Col {...textColSettings}>
+          <Row justify='center'><b>{carousel.title}</b></Row>
+          <Row className={styles["modal-text-box-body"]}>
+            <p>{carousel.description[0]}</p>
+            <p>{carousel.description[1]}</p>
+          </Row>
         </Col>
       </Row >
 
-      <Row justify="space-between" align="middle">
-        <Col className={styles["modal-text-box"]} span={12}>
-          <Row justify='center'> Subtitle</Row>
-          <Row className={styles["modal-text-box-body"]}> distinct uses. Iti usually refers to something abstract, but may also refer to concrete nouns: iting musika (this music), iti ing gagawan mi (this is  </Row>
+      <Row {...RowSettings}>
+        <Col {...textColSettings}>
+          <Row justify='center'> <b>{farisWheel.title}</b></Row>
+          <Row className={styles["modal-text-box-body"]}> {farisWheel.description} </Row>
         </Col>
-        <Col span={10}>
+        <Col {...imageColSettings}>
           <img style={{ width: "100%" }} src='./mockup/faris-wheel.png'></img>
         </Col>
       </Row>
