@@ -15,7 +15,7 @@ export const CarnivalDetails = {
     "img": "./mockup/carousel.png",
     "alt": "image of a carousel",
     "title": "Carousel",
-    "description": ["Toilet: found a collected in De Moines, Iowa", "Canoe:  found and collected in Baton Rouge, Louisiana "]
+    "description": ["Found a collected in De Moines, Iowa", "Found and collected in Baton Rouge, Louisiana "]
   },
   "farisWheel": {
     "img": "./mockup/carousel.png",

@@ -20,6 +20,13 @@ const Home: NextPage = () => {
     setModalVisability(!modalVisability)
   }
 
+  function closeModal(e: React.SyntheticEvent<HTMLElement>): void {
+    setModalVisability(false)
+  }
+
+  function openModal(e: React.SyntheticEvent<HTMLElement>): void {
+    setModalVisability(true)
+  }
 
 
   useEffect(() => {
@@ -39,12 +46,13 @@ const Home: NextPage = () => {
 
         <Modal
           visability={modalVisability}
-          modalSwitch={toggleModalVisability}
+          closeModal={closeModal}
           activeActor={activeActor} />
+
         <Row id="main-content-container">
           <Col>
             <Header />
-            <Grid modalSwitch={toggleModalVisability} />
+            <Grid openModal={openModal} />
           </Col>
 
         </Row>

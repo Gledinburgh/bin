@@ -1,12 +1,14 @@
 import { Row, Col } from 'antd'
 import styles from '../../styles/Modal.module.css'
 import { CarnivalDetails } from '../../data/ModalDetails/carnivalDetails'
+import { useLayoutEffect, useRef, useState } from 'react'
 
 const { rollerCoaster, tent, carousel, farisWheel } = CarnivalDetails
 
 const RowSettings: any = {
   justify: "space-between",
-  align: "middle"
+  align: "middle",
+  className: styles["modal-text-box-container"]
 }
 
 const imageColSettings: any = {
@@ -21,13 +23,21 @@ const textColSettings: any = {
 
 
 
+
 const CarnivalContent = () => {
+
+  useLayoutEffect(() => {
+
+    console.log("useEffect: CarnivalContent");
+  }, [])
+
   return (
 
     <div>
-      <Row {...RowSettings}>
-        <Col {...imageColSettings}>
-          <img style={{ width: "100%" }} src={rollerCoaster.img} alt={rollerCoaster.alt}></img>
+      <Row  {...RowSettings}>
+        <Col  {...imageColSettings}>
+          <div className={styles["connector"]} id={styles["connector-roller-coaster"]}></div>
+          <img className={styles["img"]} src={rollerCoaster.img} alt={rollerCoaster.alt}></img>
         </Col>
         <Col {...textColSettings}>
           <Row justify='center'><b>{rollerCoaster.title}</b></Row>
@@ -41,18 +51,26 @@ const CarnivalContent = () => {
           <Row className={styles["modal-text-box-body"]}> {tent.description} </Row>
         </Col>
         <Col {...imageColSettings}>
+          <div className={styles["connector"]} id={styles["connector-tent"]}></div>
           <img style={{ width: "100%" }} src={tent.img} alt={tent.alt}></img>
         </Col>
       </Row>
 
       <Row {...RowSettings}>
-        <Col {...imageColSettings}>
-          <img style={{ width: "100%" }} src={carousel.img}></img>
-        </Col>
-        <Col {...textColSettings}>
-          <Row justify='center'><b>{carousel.title}</b></Row>
+        <Col {...textColSettings} span={6}>
+          <Row justify='center'><b>Toilet</b></Row>
           <Row className={styles["modal-text-box-body"]}>
             <p>{carousel.description[0]}</p>
+          </Row>
+        </Col>
+        <Col {...imageColSettings} span={10}>
+          <div className={styles["connector"]} id={styles["connector-toilet"]} />
+          <div className={styles["connector"]} id={styles["connector-canoe"]} />
+          <img style={{ width: "100%" }} src={carousel.img}></img>
+        </Col>
+        <Col {...textColSettings} span={6}>
+          <Row justify='center'><b>Canoe</b></Row>
+          <Row className={styles["modal-text-box-body"]}>
             <p>{carousel.description[1]}</p>
           </Row>
         </Col>

@@ -9,7 +9,7 @@ import PetShopContent from '../ModalContent/PetShopContent'
 import { SyntheticEvent, useEffect, useRef, useState } from 'react';
 
 
-const Modal = ({ visability, modalSwitch }: { visability: boolean, modalSwitch: (e: SyntheticEvent<HTMLElement>) => void, activeActor: string }) => {
+const Modal = ({ visability, closeModal }: { visability: boolean, closeModal: (e: SyntheticEvent<HTMLElement>) => void, activeActor: string }) => {
 
   // const content = <ScrapyardContent />;
   const context = GeneralContext()
@@ -39,7 +39,7 @@ const Modal = ({ visability, modalSwitch }: { visability: boolean, modalSwitch: 
   function closeOnEscapeDown(e: any) {
 
     if (visability && (e.key === "Escape")) {
-      modalSwitch(e);
+      closeModal(e);
     }
   }
 
@@ -66,7 +66,7 @@ const Modal = ({ visability, modalSwitch }: { visability: boolean, modalSwitch: 
 
 
   return (
-    <div onClick={modalSwitch} className={styles["modal"]}>
+    <div onClick={closeModal} className={styles["modal"]}>
 
       <div ref={modalRef} onClick={e => e.stopPropagation()} className={styles["modal-content"]}>
 
@@ -75,7 +75,7 @@ const Modal = ({ visability, modalSwitch }: { visability: boolean, modalSwitch: 
             <h4></h4>
           </Col>
           <Col span={3}>
-            <button className={styles["modal-button"]} onClick={modalSwitch}>X</button>
+            <button className={styles["modal-button"]} onClick={closeModal}>X</button>
           </Col>
         </Row>
 

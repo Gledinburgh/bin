@@ -1,8 +1,15 @@
 
 import styles from '../../styles/Home.module.css'
 import { Row, Col } from 'antd'
+import { useEffect } from 'react'
 
 const Header = () => {
+
+  useEffect(() => {
+    console.log("useEffect:Header")
+  }, [])
+
+
   return (
     <Row id="header-container" justify='start' align="bottom">
       <Col span={5} >

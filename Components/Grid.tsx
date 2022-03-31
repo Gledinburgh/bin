@@ -16,8 +16,8 @@ import { map2DArray } from '../Utility/gridUtility'
 
 
 const Grid = (
-  { modalSwitch }:
-    { modalSwitch: Function }
+  { openModal }:
+    { openModal: Function }
 ) => {
 
 
@@ -30,7 +30,7 @@ const Grid = (
   function CreateActor(actorDetails: actorDetails) {
     return (
       <Actor
-        modalSwitch={modalSwitch}
+        modalSwitch={openModal}
         scale={scale}
         actorDetails={actorDetails} />
     )
