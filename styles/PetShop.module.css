@@ -1,4 +1,5 @@
-#petshop-container {
+#petshop-pedistal, #petshop-terrarium {
+  width: 110%
 }
 
 #petshop-container {
@@ -16,7 +17,6 @@
 
 
   .scene {
-    /* position: relative; */
     width: 100%;
     overflow: hidden;
   }
@@ -78,14 +78,13 @@
   }
   #parallax-hermit {
 
-    top: 50% !important;
+    top: 55% !important;
     left: 15% !important
   }
 
   #hermit-container{
     position: absolute;
-    height: 10%;
-    width: 10%;
+    width: 12%;
     animation: move-about 10s forwards infinite;
     animation-timing-function: linear;
   }
@@ -97,12 +96,12 @@
   }
 
   #petshop-door {
-    width: 150%;
+    width: 300%;
 
     position: absolute;
-    top: -10%;
+    top: -50%;
     /* left: 0%; */
-    right: -25%
+    right: -100%
 
   }
 

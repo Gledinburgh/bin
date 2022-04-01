@@ -5,13 +5,13 @@ import { useEffect, useRef } from 'react'
 import styles from '../../styles/PetShop.module.css'
 
 const depths = {
-  door: "2",
+  door: "1",
   pedistal: ".52",
   terrarium: ".5",
   hermit: ".4",
   register: ".25",
   counter: ".2",
-  back: ".05",
+  back: ".1",
 }
 
 const PetShopContent = () => {
@@ -25,6 +25,7 @@ const PetShopContent = () => {
     })
 
     parallaxInstance.enable();
+    parallaxInstance.limit(300, 300)
 
     return () => parallaxInstance.disable();
   }, [])
