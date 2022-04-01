@@ -7,7 +7,10 @@ const depths = {
   sun: ".5",
   sunBack: ".2",
   sunFace: ".3",
-  clouds: "1"
+  clouds: "1",
+  cloud1: "2",
+  cloud2: "1",
+  cloud3: ".8"
 }
 
 const ParkContent = () => {
@@ -21,7 +24,7 @@ const ParkContent = () => {
     })
 
     parallaxInstance.enable();
-    parallaxInstance.limit(300, 300)
+    parallaxInstance.limit(100, 100)
 
     return () => parallaxInstance.disable();
   }, [])
@@ -36,9 +39,11 @@ const ParkContent = () => {
             <img data-depth={depths.sunFace} id={styles["sun-face"]} src='./mockup/sun-face.png' />
           </div>
         </div>
-        <div data-depth={depths.clouds} id={styles["clouds-parallax"]}>
-          <img id={styles["clouds"]} src='./mockup/clouds.png'></img>
-        </div>
+        {/* <div id={styles["clouds-parallax"]}> */}
+        <img data-depth={depths.cloud3} className={styles["clouds"]} src='./mockup/cloud-3.png'></img>
+        <img data-depth={depths.cloud2} className={styles["clouds"]} src='./mockup/cloud-2.png'></img>
+        <img data-depth={depths.cloud1} className={styles["clouds"]} src='./mockup/cloud-1.png'></img>
+        {/* </div> */}
 
       </Col >
       <div id={styles["gap"]}>.
