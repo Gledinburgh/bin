@@ -10,8 +10,11 @@
 }
 
 .petshop-scene {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
+  filter: blur(4px);
+  animation: un-blur .5s ease 2s 1 forwards ;
+
 
 }
 
@@ -77,7 +80,7 @@
     animation: skitter .9s infinite
   }
   #parallax-hermit {
-
+    width: 100%;
     top: 55% !important;
     left: 15% !important
   }
@@ -91,12 +94,26 @@
 
   #petshop-door-container {
     height: 100%;
+    width: 100%;
+
 
 
   }
 
+  @keyframes blur {
+    from {filter: blur(0px);}
+    to {filter: blur(4px);}
+  }
+
+  @keyframes un-blur {
+    from {filter: blur(4px);}
+    to {filter: blur(0px);}
+  }
+
+
   #petshop-door {
     width: 300%;
+    animation: blur .5s ease 2s 1 forwards ;
 
     position: absolute;
     top: -50%;

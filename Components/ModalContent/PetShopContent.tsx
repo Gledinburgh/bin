@@ -40,8 +40,8 @@ const PetShopContent = () => {
         <img data-depth={depths.register} id={styles["petshop-register"]} className={styles["petshop-scene"]} src='./mockup/petshop-register.png' />
         <div id={styles["parallax-hermit"]} className={styles["petshop-scene"]} data-depth={depths.hermit}>
           <div id={styles["hermit-container"]} >
-            <div id={styles["petshop-hermit"]} className={styles["petshop-scene"]}>
-              <img id={styles["hermit-flip"]} className={styles["petshop-scene"]} src='./mockup/petshop-hermit.png' />
+            <div id={styles["hermit-flip"]}  >
+              <img id={styles["petshop-hermit"]} src='./mockup/petshop-hermit.png' />
 
             </div>
           </div>
@@ -49,7 +49,7 @@ const PetShopContent = () => {
         </div>
         <img data-depth={depths.terrarium} id={styles["petshop-terrarium"]} className={styles["petshop-scene"]} src='./mockup/petshop-terrarium.png' />
         <img data-depth={depths.pedistal} id={styles["petshop-pedistal"]} className={styles["petshop-scene"]} src='./mockup/petshop-pedistal.png' />
-        <div id={styles["petshop-door-container"]} className={styles["petshop-scene"]} data-depth={depths.door}>
+        <div id={styles["petshop-door-container"]} data-depth={depths.door}>
           <img id={styles["petshop-door"]} src='./mockup/petshop-doorway.png' />
 
         </div>

@@ -72,7 +72,7 @@ const Actor = (
 
 
   const divRef = useRef<HTMLDivElement>() as any;
-  const URL = actorDetails.imgUrl;
+  const URL = actorDetails.imgUrl ? actorDetails.imgUrl : "";
 
   function onClickHandler(area: CustomArea, index: number, event: AreaEvent) {
     context.handleActorChange(actorDetails.modal);
