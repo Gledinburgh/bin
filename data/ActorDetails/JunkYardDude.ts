@@ -5,7 +5,7 @@ export const JunkYardDude: actorDetails = {
   "id": "dude",
   "modal": "scrapYard",
   "imgUrl": "./mockup/dude-empty.png",
-  "baseWidth": 180,
+  "baseWidth": 187,
   "baseHeight": 436,
   "map": {
     "name": "dudeMap",

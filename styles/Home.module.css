@@ -6,6 +6,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(250, 142, 219);
+
 }
 
 .main-content-container {
@@ -103,11 +105,11 @@
 
 @media (min-width: 600px) {
   #nav {
-    font-size: 1.75em;
+    font-size: 1.3em;
   }
 
   #title {
-    font-size: 6em;
+    font-size: 7em;
   }
 }
 

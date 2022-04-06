@@ -40,22 +40,30 @@
   left: -100%
 }
 
-#bin {
-  z-index: 5;
-  top: 130%;
-  left: 50%;
-  transform: scale(1.2);
-
-
-}
-
 #poster {
   transform: rotate(-15deg) scale(1.6);
 
 }
 
+#bin {
+  transform: scale(.9);
+  z-index: 9;
+  top: 100%;
+  background-image: url("/mockup/bin-blink-color-sheet.png");
+  background-size: 500%;
+  display: block;
+  background-position: 0 0;
+  animation-name: smile2;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: steps(4);
+  animation-iteration-count: 1;
+}
+
 #dude {
 
+  transform: scale(1);
   background-image: url("/mockup/dude-breathe-color-sheet.png");
 
   z-index: 10;
@@ -65,71 +73,114 @@
   display: block;
   background-position: 0 0;
 
-  animation-name: sprite;
+  animation: sprite;
   animation-duration: 4s;
   animation-direction: alternate;
   animation-timing-function: steps(3);
   animation-iteration-count: infinite;
-
-
 }
 
 @keyframes sprite {
   0% {
-    background-position: 0%;
+    background-position: -0%;
+
   }
 
   10% {
     background-position: -100%;
   }
 
-  40% {
+  20% {
     background-position: -100%;
+
   }
 
   100% {
     background-position: -100%;
   }
 
+}
+
+@keyframes smile {
+
+  from {
+    background-position: 0%;
+  }
+
+  to {
+    background-position: -200%;
+  }
+
+}
+
+@keyframes un-smile {
+
+  from {
+    background-position: -400%;
+  }
+
+  to {
+    background-position: -0%;
+  }
+
+}
+
+@keyframes smile2 {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: -400%;
+  }
+
+  75% {
+    background-position: -400%;
+
+  }
+
+  100% {
+    background-position: -0%;
+  }
 }
 
 
 
 #bin[data-attention='1'] {
-  z-index: 5;
-  animation: bounce-7 1s 1;
-  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+  z-index: 9;
+  animation: bounce-7 .7s cubic-bezier(0.280, 0.840, 0.420, 1), smile .5s steps(4) forwards
 }
 
 
 
 @keyframes bounce-7 {
+
   0% {
-    transform: scale(1.2, 1.2) translateY(0);
+    transform: scale(.9, .9) translateY(0);
   }
 
   10% {
-    transform: scale(1.3, 1.2) translateY(0);
+    transform: scale(.8, .9) translateY(0);
   }
 
   30% {
-    transform: scale(1.1, 1.3) translateY(-30px);
+    transform: scale(.9, .95) translateY(-20%);
   }
 
   50% {
-    transform: scale(1.25, 1.1) translateY(0);
+    transform: scale(.85, .95) translateY(0);
   }
 
   57% {
-    transform: scale(1.2, 1.2) translateY(-3px);
+    transform: scale(.9, .95) translateY(-5%);
   }
 
   64% {
-    transform: scale(1.2, 1.2) translateY(0);
+    transform: scale(.9, .9) translateY(0);
   }
 
   100% {
-    transform: scale(1.2, 1.2) translateY(0);
+    transform: scale(.9, .9) translateY(0);
   }
 }
 
