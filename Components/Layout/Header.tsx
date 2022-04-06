@@ -14,11 +14,11 @@ const Header = () => {
     <div id={styles["header-container"]}>
       <Row justify='start' align="bottom">
 
-        <Col span={7} >
+        <Col span={10} >
           <span id={styles["title"]} > Bin </span>
 
         </Col>
-        <Col span={15}>
+        <Col span={14}>
           <Row justify='start' align="bottom" id={styles["nav"]}>
             <Col span={8}>| <a>shop</a></Col>
             <Col span={8}>| <a>about</a></Col>
