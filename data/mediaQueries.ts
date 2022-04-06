@@ -1,8 +1,8 @@
 export const queries = {
   "300": '(min-width: 300px)',
-  "400": '(min-width: 400px)',
-  "500": '(min-width: 500px)',
-  "600": '(min-width: 600px)',
+  "400": '(min-width: 450px)',
+  "500": '(min-width: 550px)',
+  "600": '(min-width: 650px)',
   "850": '(min-width: 850px)',
   "1000": '(min-width: 1000px)',
   "2000": '(min-width: 2000px)',
