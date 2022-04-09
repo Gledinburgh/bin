@@ -37,11 +37,11 @@ const Grid = (
   }
 
   const actorCoords: any = {
-    f5: CreateActor(Bin),
-    b1: CreateActor(Awning),
+    f4: CreateActor(Bin),
+    e1: CreateActor(Awning),
     i9: CreateActor(JunkYardDude),
-    d6: CreateActor(Poster),
-    d1: CreateActor(PetShopDoor),
+    e5: CreateActor(Poster),
+    f1: CreateActor(PetShopDoor),
   };
 
   useEffect(() => {
@@ -71,7 +71,6 @@ const Grid = (
                     return (
                       <td key={currentCoord}>
                         <span className={styles["coord"]} >
-                          {/* {currentCoord} */}
                         </span>
                       </td>
                     )

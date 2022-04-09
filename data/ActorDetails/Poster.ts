@@ -4,7 +4,7 @@ export const Poster: actorDetails = {
   "name": "Poster",
   "id": "poster",
   "modal": "carnival",
-  "imgUrl": "./mockup/poster1.png",
+  "imgUrl": "./mockup/poster-color.png",
   "baseWidth": 104,
   "baseHeight": 271,
   "map": {

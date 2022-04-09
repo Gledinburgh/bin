@@ -4,7 +4,7 @@ export const PetShopDoor: actorDetails = {
   "name": "PetShopDoor",
   "id": "pet-shop-door",
   "modal": "petShop",
-  "imgUrl": "./mockup/petshop-door.png",
+  "imgUrl": "./mockup/door-color.png",
   "baseWidth": 500,
   "baseHeight": 550,
   "map": {
