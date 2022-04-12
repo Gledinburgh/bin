@@ -11,7 +11,8 @@ const depths = {
   hermit: ".4",
   register: ".25",
   counter: ".2",
-  back: ".1",
+  poster: ".1",
+  back: ".05",
 }
 
 const PetShopContent = () => {
@@ -35,9 +36,10 @@ const PetShopContent = () => {
 
     <Row className={styles["scene"]} justify="center" align="middle">
       <Col ref={sceneEl} id={styles['petshop-container']}>
-        <img data-depth={depths.back} id={styles["petshop-back"]} className={styles["petshop-scene"]} src='./mockup/petshop-back.png' />
-        <img data-depth={depths.counter} id={styles["petshop-counter"]} className={styles["petshop-scene"]} src='./mockup/petshop-counter.png' />
-        <img data-depth={depths.register} id={styles["petshop-register"]} className={styles["petshop-scene"]} src='./mockup/petshop-register.png' />
+        <img data-depth={depths.back} id={styles["petshop-back"]} className={styles["petshop-scene"]} src='./mockup/petshop-back-color.png' />
+        <img data-depth={depths.poster} id={styles["petshop-poster"]} className={styles["petshop-scene"]} src='./mockup/petshop-poster-color.png' />
+        <img data-depth={depths.counter} id={styles["petshop-counter"]} className={styles["petshop-scene"]} src='./mockup/petshop-counter-color.png' />
+        <img data-depth={depths.register} id={styles["petshop-register"]} className={styles["petshop-scene"]} src='./mockup/petshop-register-color.png' />
         <div id={styles["parallax-hermit"]} className={styles["petshop-scene"]} data-depth={depths.hermit}>
           <div id={styles["hermit-container"]} >
             <div id={styles["hermit-flip"]}  >

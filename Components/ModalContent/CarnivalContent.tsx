@@ -3,7 +3,7 @@ import styles from '../../styles/Modal.module.css'
 import { CarnivalDetails } from '../../data/ModalDetails/carnivalDetails'
 import { useLayoutEffect, useRef, useState } from 'react'
 
-const { rollerCoaster, tent, carousel, farisWheel } = CarnivalDetails
+const { rollerCoaster, tent, carousel, farisWheel, intro } = CarnivalDetails
 
 const RowSettings: any = {
   justify: "space-between",
@@ -34,6 +34,11 @@ const CarnivalContent = () => {
   return (
 
     <div>
+      <Row>
+        <img className={styles["img"]} src={intro.img} alt={intro.alt}></img>
+
+
+      </Row>
       <Row  {...RowSettings}>
         <Col  {...imageColSettings}>
           <div className={styles["connector"]} id={styles["connector-roller-coaster"]}></div>
@@ -82,7 +87,7 @@ const CarnivalContent = () => {
           <Row className={styles["modal-text-box-body"]}> {farisWheel.description} </Row>
         </Col>
         <Col {...imageColSettings}>
-          <img style={{ width: "100%" }} src='./mockup/faris-wheel.png'></img>
+          <img style={{ width: "100%" }} src={farisWheel.img}></img>
         </Col>
       </Row>
     </div >
