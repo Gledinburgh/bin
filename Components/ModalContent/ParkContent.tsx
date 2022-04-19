@@ -93,11 +93,11 @@ const ParkContent = () => {
           </div>
         </div>
         <div ref={groundRef} id={styles["park-container"]} >
-          <img data-depth={depths.sun} className={styles["park-scene"]} id={styles["park-0"]} src='./mockup/park-0.png' />
-          <img data-depth={depths.treeLine} className={styles["park-scene"]} id={styles["park-1"]} src='./mockup/park-1.png' />
-          <img data-depth={depths.playGround} className={styles["park-scene"]} id={styles["park-2"]} src='./mockup/park-2.png' />
+          <img data-depth={depths.sun} className={styles["park-scene"]} id={styles["park-0"]} src='./mockup/park-0-color.png' />
+          <img data-depth={depths.treeLine} className={styles["park-scene"]} id={styles["park-1"]} src='./mockup/park-1-color.png' />
+          <img data-depth={depths.playGround} className={styles["park-scene"]} id={styles["park-2"]} src='./mockup/park-2-color.png' />
           <img data-depth={depths.kids} className={styles["park-scene"]} id={styles["park-3"]} src='./mockup/park-3.png' />
-          <img data-depth={depths.tree} className={styles["park-scene"]} id={styles["park-4"]} src='./mockup/park-4.png' />
+          <img data-depth={depths.tree} className={styles["park-scene"]} id={styles["park-4"]} src='./mockup/park-4-color.png' />
 
         </div>
       </div>
