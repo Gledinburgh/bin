@@ -37,11 +37,13 @@ const Home: NextPage = () => {
       <Head>
         <title>Binjamin the dumpster</title>
         <meta name="description" content={`Meet Bin and learn more about his adventures through his upcomming children\'s book \"Binjamin the Dumpster\f`} />
-        <meta property="og:image" content="/Bin-face.jpg" />
+        <meta property="og:image" content="/Bin-face2.jpg" />
         <meta property="twitter:image" content="/Bin-face.jpg" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/mockup/favicon-16x16.ico" />
+
+
+        {/* <link rel="icon" type="image/png" sizes="16x16" href="/mockup/favicon-16x16.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/mockup/favicon-32x32.ico" />
-        <link rel="icon" type="image/png" sizes="180x180" href="/mockup/favicon-180x180.ico" />
+        <link rel="icon" type="image/png" sizes="180x180" href="/mockup/favicon-180x180.ico" /> */}
         <link rel="icon" type="image/png" sizes="300x300" href="/mockup/favicon-300x300.ico" />
       </Head>
 
