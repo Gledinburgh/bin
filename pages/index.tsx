@@ -16,6 +16,13 @@ const Home: NextPage = () => {
   const [modalVisability, setModalVisability] = useState(false);
   const [activeActor, setActiveActor] = useState('')
 
+  const metaInfo = {
+    "title": "Binjamin the Dumpster",
+    "description": `Meet Bin and learn more about his adventures through his upcomming children's book \"Binjamin the Dumpster\"`,
+    "link": "https://bin.lspckspe2i73m.us-east-1.cs.amazonlightsail.com/",
+    "img": "https://bin.lspckspe2i73m.us-east-1.cs.amazonlightsail.com/Bin-face2.jpg"
+  }
+
   function toggleModalVisability(e: React.SyntheticEvent<HTMLElement>): void {
     setModalVisability(!modalVisability)
   }
@@ -35,10 +42,24 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Binjamin the dumpster</title>
-        <meta name="description" content={`Meet Bin and learn more about his adventures through his upcomming children\'s book \"Binjamin the Dumpster\f`} />
-        <meta property="og:image" content="/Bin-face2.jpg" />
-        <meta property="twitter:image" content="/Bin-face2.jpg" />
+
+        <title>{metaInfo.title}</title>
+        <meta name="description" content={metaInfo.description} />
+
+        <meta property="og:url" content={metaInfo.link} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={metaInfo.title} />
+        <meta property="og:description" content={metaInfo.description} />
+        <meta property="og:image" content={metaInfo.img} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="bin.lspckspe2i73m.us-east-1.cs.amazonlightsail.com" />
+        <meta property="twitter:url" content={metaInfo.link} />
+        <meta name="twitter:title" content={metaInfo.title} />
+        <meta name="twitter:description" content={metaInfo.description} />
+        <meta name="twitter:image" content={metaInfo.img} />
+
+
 
         <link rel="icon" type="image/png" sizes="16x16" href="/mockup/favicon-16x16.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/mockup/favicon-32x32.ico" />
