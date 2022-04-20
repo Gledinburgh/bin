@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 
   const metaInfo = {
     "title": "Binjamin the Dumpster",
-    "description": `Meet Bin and learn more about his adventures through his upcomming children's book \"Binjamin the Dumpster\"`,
+    "description": `Meet Bin and learn more about his adventures through the upcomming book \"Binjamin the Dumpster\"`,
     "link": "https://bin.lspckspe2i73m.us-east-1.cs.amazonlightsail.com/",
     "img": "https://bin.lspckspe2i73m.us-east-1.cs.amazonlightsail.com/Bin-face2.png"
   }
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
   }
 
   function openModal(e: React.SyntheticEvent<HTMLElement>): void {
-    setModalVisability(true)
+    setModalVisability(true)e
   }
 
 
