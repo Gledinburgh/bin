@@ -20,7 +20,7 @@ const Home: NextPage = () => {
     "title": "Binjamin the Dumpster",
     "description": `Meet Bin and learn more about his adventures through his upcomming children's book \"Binjamin the Dumpster\"`,
     "link": "https://bin.lspckspe2i73m.us-east-1.cs.amazonlightsail.com/",
-    "img": "/Bin-face2.jpg"
+    "img": "https://bin.lspckspe2i73m.us-east-1.cs.amazonlightsail.com/Bin-face2.png"
   }
 
   function toggleModalVisability(e: React.SyntheticEvent<HTMLElement>): void {
