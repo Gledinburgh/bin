@@ -58,6 +58,7 @@
 #nav {
   /* font-size: 2em; */
   white-space: nowrap;
+  padding-bottom: 10%;
 }
 
 @media (max-width: 300px) {
