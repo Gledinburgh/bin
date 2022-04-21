@@ -32,7 +32,7 @@ const Home: NextPage = () => {
   }
 
   function openModal(e: React.SyntheticEvent<HTMLElement>): void {
-    setModalVisability(true)e
+    setModalVisability(true)
   }
 
 

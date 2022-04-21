@@ -34,11 +34,11 @@ const CarnivalContent = () => {
   return (
 
     <div>
+
       <Row>
         <img className={styles["img"]} src={intro.img} alt={intro.alt}></img>
-
-
       </Row>
+
       <Row  {...RowSettings}>
         <Col  {...imageColSettings}>
           <div className={styles["connector"]} id={styles["connector-roller-coaster"]}></div>

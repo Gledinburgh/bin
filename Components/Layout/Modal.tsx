@@ -74,8 +74,12 @@ const Modal = ({ visability, closeModal }: { visability: boolean, closeModal: (e
           <Col span={20} className={styles["modal-title"]}>
             <h4></h4>
           </Col>
-          <Col span={3}>
-            <button className={styles["modal-button"]} onClick={closeModal}>X</button>
+          <Col className={"modal-button-container"} span={4}>
+            <button className={styles["modal-button"]} >
+
+              <img onClick={closeModal} className={styles["button-img"]} src="/mockup/can-lid-color.png" />
+            </button>
+
           </Col>
         </Row>
 

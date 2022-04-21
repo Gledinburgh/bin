@@ -1,7 +1,7 @@
 .connector {
   position: absolute;
   height: 0px;
-  transform-origin:  left;
+  transform-origin: left;
   z-index: 1;
   /* background-color: rgb(135, 18, 237); */
   border: black dashed;
@@ -13,6 +13,7 @@
   left: 100%;
   transform: rotate(-20deg);
 }
+
 #connector-tent {
   top: 50%;
   width: 50%;
@@ -28,8 +29,9 @@
   transform: rotate(-310deg);
 
 }
+
 #connector-canoe {
-  transform-origin:  right;
+  transform-origin: right;
 
   top: 55%;
   left: 80%;
@@ -44,7 +46,7 @@
 }
 
 
-.modal{
+.modal {
   overflow-y: scroll;
   position: fixed;
   left: 0;
@@ -62,8 +64,9 @@
 
 @keyframes fade-in {
   0% {
-opacity:  0%;
+    opacity: 0%;
   }
+
   100% {
     opacity: 100%;
   }
@@ -71,9 +74,17 @@ opacity:  0%;
 
 @keyframes scroll-in {
 
-  0% {transform: translateY(-100%);}
-  30% {transform: translateY(5%);}
-  85% {transform: translateY(0%);}
+  0% {
+    transform: translateY(-100%);
+  }
+
+  30% {
+    transform: translateY(5%);
+  }
+
+  85% {
+    transform: translateY(0%);
+  }
 
 
 }
@@ -101,21 +112,29 @@ opacity:  0%;
 
 .modal-button {
   border-radius: 50%;
-  width: max(4vw, 4vh);
-  min-width: 40px;
-  min-height: 40px;
-  margin-top: 100%;
-  margin-bottom: 100%;
-  height: max(4vw, 4vh);
+  margin-top: 50%;
+  margin-bottom: 50%;
+  background-color: none;
+  border-radius: 50%;
+  background: none;
+  background-color: none;
+  border: none;
+  width: 100%;
+}
+
+.button-img {
+  width: 100%;
 }
 
 
 
-.modal-text-box, .modal-intro {
+.modal-text-box,
+.modal-intro {
   margin-bottom: 5%;
-  background-image: url('/mockup/crumpled-paper.jpg');
+  background-color: rgb(255, 255, 255);
+  background-image: url('/mockup/crumpled-paper.png');
   object-fit: contain;
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   z-index: 10;
 
@@ -130,32 +149,36 @@ opacity:  0%;
   width: 90vw;
 }
 
-.modal-intro-container, .modal-text-box-container{
+.modal-intro-container,
+.modal-text-box-container {
   position: relative;
   filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
   width: 100%;
 }
 
 
-.modal-text-box-body{
+.modal-text-box-body {
   padding: 2%;
   width: 100%;
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+
 
 }
 
 
 @media (min-width: 300px) {
 
- .modal-body {
+  .modal-body {
     width: 300px;
     height: 300px;
     font-size: .75em;
 
   }
 }
+
 @media (min-width: 400px) {
 
- .modal-body {
+  .modal-body {
     width: 400px;
     height: 400px;
     font-size: 1em;
@@ -165,7 +188,7 @@ opacity:  0%;
 
 @media (min-width: 500px) {
 
- .modal-body {
+  .modal-body {
     width: 500px;
     height: 500px;
     font-size: 1.5em;
@@ -175,7 +198,7 @@ opacity:  0%;
 
 @media (min-width: 600px) {
 
- .modal-body {
+  .modal-body {
     width: 600px;
     height: 600px;
     font-size: 1.25em;
@@ -183,28 +206,29 @@ opacity:  0%;
 
   }
 }
+
 @media (min-width: 850px) {
 
- .modal-body {
+  .modal-body {
     width: 650px;
     height: 650px;
     font-size: 1.75em;
   }
-  .modal-button {
-    width: min(4vw, 4vh);
-    height: min(4vw, 4vh);
-  }
-  .modal-text-box, .modal-intro {
+
+
+
+  .modal-text-box,
+  .modal-intro {
     margin-bottom: 40px;
 
   }
 }
 
- @media (min-width: 1000px) {
+@media (min-width: 1000px) {
 
- .modal-body {
-  width: 750px;
-  height: 750px;
+  .modal-body {
+    width: 750px;
+    height: 750px;
   }
 }
 
@@ -221,6 +245,3 @@ opacity:  0%;
 
 
 /* --- Pet Shop --- */
-
-
-
