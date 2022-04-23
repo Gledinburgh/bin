@@ -1,11 +1,9 @@
 import ImageMapper, { AreaEvent, CustomArea } from 'react-img-mapper';
-import { NextComponentType } from "next";
 import styles from '../styles/Grid.module.css'
 import { useEffect, useState, useRef } from 'react'
-import { devNull } from 'os';
 import { actorDetails } from '../types';
 import { GeneralContext } from '../Context/GeneralContext';
-
+import Image from 'next/image'
 
 
 const Actor = (
@@ -28,9 +26,6 @@ const Actor = (
   const handleMouseOver = () => {
     setIsMouseOver(true)
   }
-
-
-
   const handleMouseLeave = () => {
     setIsMouseOver(false)
   }
@@ -41,10 +36,49 @@ const Actor = (
     })
   }
 
+  function generateContent(actorDetails: actorDetails) {
+    var content = {
+      main: <div></div>,
+      shaddow: <div></div>,
+      outline: <div></div>,
+    };
+
+
+    if (actorDetails.outline) {
+      content.outline =
+        <div
+          className={styles["outline-wobble"]}
+          id={styles[actorDetails.id + '-wobble']}>
+        </div>
+
+    }
+
+    if (actorDetails.shaddow) {
+      const { baseWidth, baseHeight, imgUrl } = actorDetails.shaddow
+
+      content.shaddow =
+        <div
+          className={styles["shaddow"]}
+          id={styles[actorDetails.id + '-shaddow']}
+          data-attention={isAttention}>
+          <Image src={imgUrl} width={scale * baseWidth} height={scale * baseHeight} layout="fixed"></Image>
+        </div>
+
+    }
+
+    return content;
+  }
+
+  const content = generateContent(actorDetails);
+
   useEffect(() => {
 
     const interval = setInterval(() => {
-      if (isAttention !== '1') setIsAttention('1')
+      console.log("Actor:interval")
+      if (isAttention !== "1") {
+        setIsAttention("1")
+        console.log("attention:", actorDetails.id)
+      }
     }, 7000)
 
     document.body.style.cursor = isMouseOver ? "pointer" : "default"
@@ -66,8 +100,6 @@ const Actor = (
   function calculateWidth(scale: number) {
     //return actorDetails.baseWidth * scale;
     return actorDetails.baseWidth * scale
-
-
   }
 
 
@@ -80,15 +112,31 @@ const Actor = (
   }
 
   return (
-    <div className={styles.actor} id={styles[actorDetails.id]} onAnimationEnd={() => setIsAttention('0')} data-attention={isAttention} >
-      <ImageMapper
-        onMouseLeave={handleMouseLeave}
-        onMouseEnter={handleMouseOver}
-        onClick={onClickHandler}
-        containerRef={divRef}
-        width={calculateWidth(scale)}
-        imgWidth={calculateWidth(scale)} src={URL} map={MAP} />
+    <div>
+      <div
+        className={styles.actor}
+        id={styles[actorDetails.id]}
+        onAnimationEnd={() => setIsAttention('0')}
+        data-attention={isAttention} >
+
+        {content.outline}
+
+        <ImageMapper
+          onMouseLeave={handleMouseLeave}
+          onMouseEnter={handleMouseOver}
+          onClick={onClickHandler}
+          containerRef={divRef}
+          width={calculateWidth(scale)}
+          imgWidth={calculateWidth(scale)}
+          src={URL}
+          map={MAP} />
+      </div>
+
+      {content.shaddow}
+
     </div>
+
+
 
   )
 

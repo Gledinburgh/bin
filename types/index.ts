@@ -7,6 +7,8 @@ export interface actorDetails {
   "imgUrl": string,
   "baseWidth": number,
   "baseHeight": number,
+  "shaddow"?: any,
+  "outline"?: boolean,
   "map": {
     "name": string
     "areas": MapAreas[];

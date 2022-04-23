@@ -1,10 +1,10 @@
-import { NextComponentType } from "next";
 import Actor from "./Actor";
 import { Bin } from "../data/ActorDetails/Bin"
 import { JunkYardDude } from "../data/ActorDetails/JunkYardDude"
 import { PetShopDoor } from "../data/ActorDetails/PetShopDoor"
 import { Poster } from "../data/ActorDetails/Poster"
 import { Awning } from "../data/ActorDetails/Awning";
+import { BinShaddow } from "../data/ActorDetails/BinShaddow";
 
 import styles from '../styles/Grid.module.css'
 import { actorDetails } from "../types";
@@ -37,6 +37,7 @@ const Grid = (
   }
 
   const actorCoords: any = {
+    // h5: CreateActor(BinShaddow),
     f4: CreateActor(Bin),
     e1: CreateActor(Awning),
     i9: CreateActor(JunkYardDude),
@@ -71,6 +72,7 @@ const Grid = (
                     return (
                       <td key={currentCoord}>
                         <span className={styles["coord"]} >
+                          {currentCoord}
                         </span>
                       </td>
                     )

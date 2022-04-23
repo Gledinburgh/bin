@@ -9,7 +9,7 @@
   background-color: rgb(62, 253, 180);
   /* background-color: #DFDBE5; */
   /* background-color: #DFDBE5; */
-  background-color: #f3a774;
+  background-color: #ff6975;
   background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%235d273c' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
 }
@@ -42,19 +42,40 @@
 
 /*  --- Header --- */
 
-#header-container {
+.header-container {
   min-width: 300px;
   margin-bottom: 2%;
   position: relative;
+  z-index: 0;
+}
+
+#title-base {
+  /* height: min(20vh, 20vw); */
+  height: 100%;
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background-color: #ff6975;
+  left: -10%;
+
+  top: -30%;
+
+}
+
+#img-container {
+  z-index: 5;
+  position: relative;
+  width: 100%;
+}
+
+#title-img {
+  width: 100%;
+  z-index: 3;
 }
 
 #title {
+  width: 100%;
   color: #eaeaea00;
-  /* font-size: 4em; */
-  align-items: baseline;
-  line-height: 1.4;
-  font-weight: 700;
-  background-image: url('/mockup/Title-color-2.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -98,8 +119,9 @@
     font-size: 1em;
   }
 
-  #title {
-    font-size: 4em;
+  .header-container {
+    width: 300px;
+
   }
 }
 
@@ -109,8 +131,9 @@
     font-size: .9em;
   }
 
-  #title {
-    font-size: 5em;
+  .header-container {
+    width: 300px;
+
   }
 }
 
@@ -119,8 +142,10 @@
     font-size: 1.1em;
   }
 
-  #title {
-    font-size: 7.5em;
+
+  .header-container {
+    width: 400px;
+
   }
 
 }
@@ -130,8 +155,9 @@
     font-size: 1.5em;
   }
 
-  #title {
-    font-size: 9.5em;
+  .header-container {
+    width: 500px;
+
   }
 }
 
@@ -140,9 +166,7 @@
     font-size: 1.3em;
   }
 
-  #title {
-    font-size: 9em;
-  }
+
 }
 
 @media (min-width: 650px) {
@@ -150,20 +174,26 @@
     font-size: 1.7em;
   }
 
-  #title {
-    font-size: 11em;
+
+
+  .header-container {
+    width: 600px;
+
   }
 }
 
 
 @media (min-width: 850px) {
 
-  #title {
-    font-size: 12em;
-  }
+
 
   #nav {
     font-size: 1.9em;
+  }
+
+  .header-container {
+    width: 650px;
+
   }
 
   .main {
@@ -180,8 +210,10 @@
     font-size: 2.2em;
   }
 
-  #title {
-    font-size: 14em;
+
+  .header-container {
+    width: 750px;
+
   }
 }
 
@@ -190,8 +222,10 @@
     font-size: 3em;
   }
 
-  #title {
-    font-size: 23em;
+
+  .header-container {
+    width: 1200px;
+
   }
 
   .main {

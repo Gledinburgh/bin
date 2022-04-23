@@ -7,7 +7,7 @@ import styles from '../styles/Home.module.css'
 import { GeneralContext } from '../Context/GeneralContext'
 import Modal from '../Components/Layout/Modal'
 import { useState, useEffect } from 'react'
-import Header from '../Components/Layout/Header'
+import Header2 from '../Components/Layout/Header2'
 
 
 const Home: NextPage = () => {
@@ -78,8 +78,10 @@ const Home: NextPage = () => {
 
         <Row id="main-content-container">
           <Col>
-            <Header />
-            <Grid openModal={openModal} />
+            <div style={{ zIndex: 1 }}><Header2 /></div>
+            <div style={{ zIndex: 2 }}><Grid openModal={openModal} /></div>
+
+
           </Col>
 
         </Row>

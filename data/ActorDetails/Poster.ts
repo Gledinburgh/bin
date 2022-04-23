@@ -1,12 +1,15 @@
 import { actorDetails } from "../../types";
 
+
 export const Poster: actorDetails = {
   "name": "Poster",
   "id": "poster",
   "modal": "carnival",
-  "imgUrl": "./mockup/poster-color.png",
-  "baseWidth": 104,
-  "baseHeight": 271,
+  "imgUrl": "./mockup/poster-empty.png",
+  "baseWidth": 220,
+  "baseHeight": 310,
+  "outline": true,
+  shaddow: null,
   "map": {
     "name": "PosterMap",
     "areas": [{

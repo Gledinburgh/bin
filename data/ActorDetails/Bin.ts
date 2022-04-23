@@ -1,5 +1,21 @@
 import { actorDetails } from "../../types";
 
+const BinShaddow: actorDetails = {
+  "name": "BinShaddow",
+  "id": "bin-shaddow",
+  "modal": "",
+  "imgUrl": "/mockup/bin-shaddow.png",
+  "baseWidth": 346,
+  "baseHeight": 99,
+  "map": {
+    "name": "binShaddow",
+    "areas": [{
+      shape: "poly",
+      coords: []
+    }]
+  }
+}
+
 export const Bin: actorDetails = {
   "name": "Bin",
   "id": "bin",
@@ -7,6 +23,8 @@ export const Bin: actorDetails = {
   "imgUrl": "./mockup/bin-empty.png",
   "baseWidth": 461,
   "baseHeight": 266,
+  "shaddow": BinShaddow,
+  "outline": true,
   "map": {
     "name": "binMap",
     "areas": [{
@@ -15,3 +33,4 @@ export const Bin: actorDetails = {
     }]
   }
 }
+

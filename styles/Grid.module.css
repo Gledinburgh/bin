@@ -1,15 +1,11 @@
 .col>td {
   /* outline: rgba(0, 0, 0, 0.13) solid 1px; */
   text-align: center;
-
 }
 
 .coord {
   position: absolute;
   color: rgba(0, 0, 0, 0.411);
-
-
-
 }
 
 .grid-container {
@@ -20,13 +16,10 @@
   background-size: cover;
   overflow: hidden !important;
   outline: rgba(0, 0, 0, 0.13) solid 5px;
-
-
 }
 
 .actor {
   position: absolute;
-
 }
 
 #pet-shop-door {
@@ -42,8 +35,21 @@
 }
 
 #poster {
-  transform: scale(1.8);
-  top: 100%
+  /* transform: scale(1); */
+
+  transform: scale(1);
+  top: 10%;
+  left: -50%;
+  z-index: 2;
+  /* background-size: 500%; */
+  /* display: block; */
+  /* background-position: 0 0; */
+  display: block;
+  background-position: 0 0;
+  background-size: 100%;
+  background-image: url("/mockup/poster-color2.png");
+
+
 }
 
 #bin {
@@ -54,7 +60,6 @@
   background-image: url("/mockup/bin-blink-color-sheet.png");
   background-size: 500%;
   display: block;
-  background-position: 0 0;
   animation-name: smile2;
   animation-duration: 1s;
   animation-delay: 1s;
@@ -62,6 +67,32 @@
   animation-timing-function: steps(4);
   animation-iteration-count: 1;
 }
+
+#bin-wobble {
+  background-image: url("/mockup/bin-wobble.png");
+}
+
+#poster-wobble {
+  background-image: url("/mockup/poster-wobble-sheet.png");
+
+}
+
+.outline-wobble {
+  background-size: 500%;
+  display: block;
+  background-position: 0 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: wobble;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  /* animation-direction: alternate; */
+  animation-timing-function: steps(4);
+  animation-iteration-count: infinite;
+}
+
+
 
 #dude {
 
@@ -80,6 +111,17 @@
   animation-direction: alternate;
   animation-timing-function: steps(3);
   animation-iteration-count: infinite;
+}
+
+@keyframes wobble {
+  from {
+    background-position: -100%;
+  }
+
+  to {
+    background-position: -500%;
+  }
+
 }
 
 @keyframes sprite {
@@ -150,7 +192,7 @@
 
 #bin[data-attention='1'] {
   z-index: 9;
-  animation: bounce-7 .7s cubic-bezier(0.280, 0.840, 0.420, 1), smile .5s steps(4) forwards
+  animation: bounce-7 1s cubic-bezier(0.280, 0.840, 0.420, 1), smile .5s steps(4) forwards
 }
 
 
@@ -256,5 +298,40 @@
     width: 1200px;
     height: 1200px;
 
+  }
+}
+
+/* --- Shaddows --- */
+
+.shaddow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#bin-shaddow {
+  left: 150%;
+  bottom: -350%;
+  z-index: 1;
+  /* height: 100%; */
+  /* background-color: aqua; */
+}
+
+#bin-shaddow[data-attention='1'] {
+  animation-name: shrink;
+  animation-duration: .2s;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+
+    transform: scale(.85) translateX(-10%);
   }
 }
