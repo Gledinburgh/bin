@@ -15,6 +15,7 @@ const Header2 = () => {
       <div id={styles["title"]}>
         <div id={styles["img-container"]}>
 
+          <img id={styles["title-shaddow"]} src="mockup/title-shaddow.png" />
           <img id={styles["title-img"]} src="mockup/titlev2.png" />
         </div>
         <div id={styles["title-base"]}></div>

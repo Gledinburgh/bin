@@ -1,5 +1,5 @@
 import ImageMapper, { AreaEvent, CustomArea } from 'react-img-mapper';
-import styles from '../styles/Grid.module.css'
+import styles from '../styles/Actors.module.css'
 import { useEffect, useState, useRef } from 'react'
 import { actorDetails } from '../types';
 import { GeneralContext } from '../Context/GeneralContext';
@@ -20,8 +20,6 @@ const Actor = (
   var [MAP, setMAP] = useState({ ...actorDetails.map })
   var [isMouseOver, setIsMouseOver] = useState(false)
   var [isAttention, setIsAttention] = useState('0')
-
-  const actorRef: any = useRef(null);
 
   const handleMouseOver = () => {
     setIsMouseOver(true)
@@ -128,6 +126,8 @@ const Actor = (
           containerRef={divRef}
           width={calculateWidth(scale)}
           imgWidth={calculateWidth(scale)}
+          fillColor="rgba(255, 255, 255, 0)"
+          strokeColor="rgba(0,0,0,0)"
           src={URL}
           map={MAP} />
       </div>

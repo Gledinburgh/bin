@@ -60,16 +60,11 @@ const ParkContent = () => {
       <Col ref={skyRef} id={styles["sky-container"]} >
         <img id={styles["plane"]} src='./mockup/plane.png' />
         <div data-depth={depths.sun}>
-          {/* <div className={styles["sky-scene"]} id={styles["sun"]} >
-            <img data-depth={depths.sunBack} id={styles["sun-back"]} src='./mockup/sun-back.png' />
-            <img data-depth={depths.sunFace} id={styles["sun-face"]} src='./mockup/sun-face.png' />
-          </div> */}
+
         </div>
-        {/* <div id={styles["clouds-parallax"]}> */}
         <img data-depth={depths.cloud3} className={styles["clouds"]} src='./mockup/cloud-3.png'></img>
         <img data-depth={depths.cloud2} className={styles["clouds"]} src='./mockup/cloud-2.png'></img>
         <img data-depth={depths.cloud1} className={styles["clouds"]} src='./mockup/cloud-1.png'></img>
-        {/* </div> */}
 
       </Col >
       <div id={styles["gap"]}>.
@@ -80,6 +75,8 @@ const ParkContent = () => {
 
 
       <div id={styles["ground"]}>
+
+
         <div
           id={styles["mariposa-container"]}
           data-fly={fly}
@@ -92,6 +89,8 @@ const ParkContent = () => {
             </div>
           </div>
         </div>
+
+
         <div ref={groundRef} id={styles["park-container"]} >
           <img data-depth={depths.sun} className={styles["park-scene"]} id={styles["park-0"]} src='./mockup/park-0-color.png' />
           <img data-depth={depths.treeLine} className={styles["park-scene"]} id={styles["park-1"]} src='./mockup/park-1-color.png' />

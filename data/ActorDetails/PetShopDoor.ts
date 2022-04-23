@@ -5,13 +5,13 @@ export const PetShopDoor: actorDetails = {
   "id": "pet-shop-door",
   "modal": "petShop",
   "imgUrl": "./mockup/door-color.png",
-  "baseWidth": 500,
-  "baseHeight": 550,
+  "baseWidth": 592,
+  "baseHeight": 678,
   "map": {
     "name": "doorMap",
     "areas": [{
       shape: "poly",
-      coords: [270, 99, 368, 120, 493, 142, 497, 160, 497, 202, 496, 275, 495, 341, 495, 422, 496, 468, 494, 548, 271, 498, 268, 294]
+      coords: [211, 486, 195, 557, 167, 562, 172, 570, 472, 674, 503, 665, 530, 527, 549, 337, 577, 90, 578, 68, 589, 28, 389, 19, 299, 19, 286, 24, 218, 19, 176, 1, 131, 7, 25, 1, 21, 57, 17, 108, 11, 195, 6, 298, 0, 376, 0, 421, 1, 463]
     }]
   }
 }

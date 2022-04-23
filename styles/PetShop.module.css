@@ -1,4 +1,5 @@
-#petshop-pedistal, #petshop-terrarium {
+#petshop-pedistal,
+#petshop-terrarium {
   width: 110%
 }
 
@@ -6,119 +7,134 @@
 
   position: relative;
   width: 100%
-
 }
 
 .petshop-scene {
   /* position: absolute; */
   width: 100%;
   filter: blur(4px);
-  animation: un-blur .5s ease 2s 1 forwards ;
+  -webkit-filter: blur(4px);
+  animation: un-blur .5s ease 2s 1 forwards;
 
 
 }
 
 
-  .scene {
-    width: 100%;
-    overflow: hidden;
+.scene {
+  width: 100%;
+  overflow: hidden;
+}
+
+@keyframes skitter {
+  0% {
+    transform: rotate(0deg)
   }
 
-  @keyframes skitter {
-    0% {
-      transform: rotate(0deg)
-    }
-    50% {
-      transform: rotate(3deg)
-    }
-
-    100% {
-      transform: rotate(0deg)
-
-    }
+  50% {
+    transform: rotate(3deg)
   }
 
-  @keyframes move-about {
+  100% {
+    transform: rotate(0deg)
+  }
+}
 
-    0% {
-      transform: translateX(0%)
-    }
-    50% {
+@keyframes move-about {
 
-      transform: translateX(200%)
-    }
-
-    100% {
-      transform: translateX(0%)
-    }
+  0% {
+    transform: translateX(0%)
   }
 
-  @keyframes flip {
-    0% {
-      transform:scaleX(1)
-    }
-    50%{
-      transform: scaleX(1);
-    }
+  50% {
 
-    51%{
-      transform: scaleX(-1);
-    }
-
-    100% {
-      transform: scaleX(-1);
-    }
+    transform: translateX(200%)
   }
 
-  #hermit-flip {
-    animation: flip 10s infinite;
-    animation-timing-function: linear;
+  100% {
+    transform: translateX(0%)
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: scaleX(1)
   }
 
-  #petshop-hermit {
-    width: 100%;
-    animation: skitter .9s infinite
-  }
-  #parallax-hermit {
-    width: 100%;
-    top: 55% !important;
-    left: 15% !important
+  50% {
+    transform: scaleX(1);
   }
 
-  #hermit-container{
-    position: absolute;
-    width: 12%;
-    animation: move-about 10s forwards infinite;
-    animation-timing-function: linear;
+  51% {
+    transform: scaleX(-1);
   }
 
-  #petshop-door-container {
-    height: 100%;
-    width: 100%;
+  100% {
+    transform: scaleX(-1);
+  }
+}
+
+#hermit-flip {
+  animation: flip 10s infinite;
+  animation-timing-function: linear;
+}
+
+#petshop-hermit {
+  width: 100%;
+  animation: skitter .9s infinite
+}
+
+#parallax-hermit {
+  width: 100%;
+  top: 55% !important;
+  left: 15% !important
+}
+
+#hermit-container {
+  position: absolute;
+  width: 12%;
+  animation: move-about 10s forwards infinite;
+  animation-timing-function: linear;
+}
+
+#petshop-door-container {
+  height: 100%;
+  width: 100%;
 
 
 
+}
+
+@keyframes blur {
+  from {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
   }
 
-  @keyframes blur {
-    from {filter: blur(0px);}
-    to {filter: blur(4px);}
+  to {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }
+}
+
+@keyframes un-blur {
+  from {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
   }
 
-  @keyframes un-blur {
-    from {filter: blur(4px);}
-    to {filter: blur(0px);}
+  to {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
   }
+}
 
 
-  #petshop-door {
-    width: 300%;
-    animation: blur .5s ease 2s 1 forwards ;
+#petshop-door {
+  width: 300%;
+  animation: blur .5s ease 2s 1 forwards;
 
-    position: absolute;
-    top: -50%;
-    /* left: 0%; */
-    right: -100%
-
-  }
-
+  position: absolute;
+  top: -50%;
+  /* left: 0%; */
+  right: -100%
+}

@@ -4,7 +4,6 @@ import { JunkYardDude } from "../data/ActorDetails/JunkYardDude"
 import { PetShopDoor } from "../data/ActorDetails/PetShopDoor"
 import { Poster } from "../data/ActorDetails/Poster"
 import { Awning } from "../data/ActorDetails/Awning";
-import { BinShaddow } from "../data/ActorDetails/BinShaddow";
 
 import styles from '../styles/Grid.module.css'
 import { actorDetails } from "../types";
@@ -72,7 +71,7 @@ const Grid = (
                     return (
                       <td key={currentCoord}>
                         <span className={styles["coord"]} >
-                          {currentCoord}
+                          {/* {currentCoord} */}
                         </span>
                       </td>
                     )
