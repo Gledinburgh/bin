@@ -3,15 +3,15 @@
 }
 
 #dude:hover,
-#poster:hover {
+#poster:hover,
+#pet-shop-door:hover {
   transform: scale(1.05);
 
 }
 
 #pet-shop-door {
-  left: -200%;
-  top: -65%;
-  transform: scale(.65, .7);
+  left: -100%;
+  top: 25%;
 }
 
 #awning {
