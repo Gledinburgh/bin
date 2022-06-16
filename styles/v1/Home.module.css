@@ -1,0 +1,154 @@
+.main {
+  --brick: url("data:image/svg+xml,%3Csvg width='84' height='88' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%235d273c' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+}
+
+#stage {
+  --xxs: 300px;
+  --xs: 400px;
+  --s: 500px;
+  --m: 600px;
+  --l: 650px;
+  --xl: 750px;
+  --xxl: 1200px;
+}
+
+.main {
+  background-image: var(--brick);
+  background-color: #f3a774;
+  width: 100vw;
+
+}
+
+/*--- header --- */
+
+#header {
+  position: relative;
+
+  background-color: rgb(15, 66, 15);
+  padding-top: 8vh;
+}
+
+/*  --- Stage --- */
+
+#content {
+  background-image: url("/Background/brick-wall-texture-xxl.jpg");
+  background-repeat: repeat;
+}
+
+#interactive-zone {
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+  min-width: 300px;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+#stage {
+  background-color: aqua;
+  overflow: hidden;
+}
+
+#interactive-zone {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#interactive-zone::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- footer --- */
+
+.footer {
+  position: relative;
+  height: 20vh;
+}
+
+/* --- media query --- */
+
+@media (min-width: 300px) {
+
+  #content {
+    background-image: url("/Background/brick-wall-texture-m.jpg");
+  }
+}
+
+@media (min-width: 1200px) {
+
+  #content {
+    background-image: url("/Background/brick-wall-texture-xxl.jpg");
+  }
+}
+
+@media (max-width: 300px) {
+
+  #stage,
+  #interactive-zone {
+    width: var(--xxs);
+    height: var(--xxs);
+  }
+}
+
+@media (min-width: 300px) {
+
+  #stage,
+  #interactive-zone {
+    width: var(--xxs);
+    height: var(--xxs);
+  }
+}
+
+@media (min-width: 450px) {
+
+  #stage,
+  #interactive-zone {
+    width: var(--xs);
+    height: var(--xs);
+  }
+}
+
+@media (min-width: 550px) {
+
+  #stage,
+  #interactive-zone {
+    width: var(--s);
+    height: var(--s);
+  }
+}
+
+@media (min-width: 650px) {
+
+  #stage,
+  #interactive-zone {
+    width: var(--m);
+    height: var(--m);
+  }
+}
+
+@media (min-width: 850px) {
+
+  #stage,
+  #interactive-zone {
+    width: var(--l);
+    height: var(--l);
+  }
+}
+
+@media (min-width: 1000px) {
+
+  #stage,
+  #interactive-zone {
+    width: var(--xl);
+    height: var(--xl);
+  }
+}
+
+
+@media (min-width: 2000px) {
+
+  #stage,
+  #interactive-zone {
+    width: var(--xxl);
+    height: var(--xxl);
+  }
+}

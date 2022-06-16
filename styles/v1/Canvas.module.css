@@ -1,0 +1,115 @@
+.grid-container {
+  --xxs: 360px;
+  --xs: 480px;
+  --s: 600px;
+  --m: 720px;
+  --l: 780px;
+  --xl: 900px;
+  --xxl: 1440px;
+}
+
+
+.col>td {
+  text-align: center;
+}
+
+.coord {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.411);
+}
+
+.grid-container {
+  min-width: 300px;
+  width: 1000px;
+  height: 1000px;
+  background-image: url('/mockup/back-2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#crop {
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#crop::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 300px) {
+
+  .grid-container {
+    width: var(--xxs);
+    height: var(--xxs);
+  }
+
+  #crop {
+    width: var(--xxs);
+    height: var(--xxs)
+  }
+}
+
+@media (min-width: 300px) {
+
+  #crop,
+  .grid-container {
+    width: var(--xxs);
+    height: var(--xxs)
+  }
+}
+
+@media (min-width: 450px) {
+
+  #crop,
+  .grid-container {
+    width: var(--xs);
+    height: var(--xs);
+  }
+}
+
+@media (min-width: 550px) {
+
+  #crop,
+  .grid-container {
+    width: var(--s);
+    height: var(--s);
+  }
+}
+
+@media (min-width: 650px) {
+
+  #crop,
+  .grid-container {
+    width: var(--m);
+    height: var(--m);
+  }
+}
+
+@media (min-width: 850px) {
+
+  #crop,
+  .grid-container {
+    width: var(--l);
+    height: var(--l);
+  }
+}
+
+@media (min-width: 1000px) {
+
+  #crop,
+  .grid-container {
+    width: var(--xl);
+    height: var(--xl);
+  }
+}
+
+
+@media (min-width: 2000px) {
+
+  #crop,
+  .grid-container {
+    width: var(--xxl);
+    height: var(--xxl);
+  }
+}

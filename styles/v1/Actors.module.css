@@ -1,0 +1,230 @@
+.actor {
+  position: absolute;
+}
+
+#dude:hover,
+#poster:hover,
+#pet-shop-door:hover {
+  transform: scale(1.05);
+
+}
+
+#pet-shop-door {
+  left: -100%;
+  top: 25%;
+}
+
+#awning {
+  pointer-events: none;
+  z-index: 10;
+  left: -200%;
+  top: 10%;
+}
+
+#poster {
+  transform: scale(1);
+  top: 10%;
+  left: -50%;
+  z-index: 2;
+  display: block;
+  background-position: 0 0;
+  background-size: 100%;
+  background-image: url("/mockup/poster-color2.png");
+}
+
+#bin {
+  transform: scale(.8);
+  z-index: 9;
+  top: 100%;
+  left: 60%;
+  background-image: url("/mockup/bin-blink-color-sheet.png");
+  background-size: 500%;
+  display: block;
+  animation-name: smile2;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: steps(4);
+  animation-iteration-count: 1;
+}
+
+#bin-wobble {
+  background-image: url("/mockup/bin-wobble.png");
+}
+
+#poster-wobble {
+  background-image: url("/mockup/poster-wobble-sheet.png");
+
+}
+
+.outline-wobble {
+  background-size: 500%;
+  display: block;
+  background-position: 0 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: wobble;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-timing-function: steps(4);
+  animation-iteration-count: infinite;
+}
+
+#dude {
+
+  transform: scale(1);
+  background-image: url("/mockup/dude-breathe-color-sheet.png");
+
+  z-index: 10;
+  left: 20%;
+  bottom: -100%;
+  background-size: 400%;
+  display: block;
+  background-position: 0 0;
+
+  animation: sprite;
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-timing-function: steps(3);
+  animation-iteration-count: infinite;
+}
+
+@keyframes wobble {
+  from {
+    background-position: -100%;
+  }
+
+  to {
+    background-position: -500%;
+  }
+}
+
+@keyframes sprite {
+  0% {
+    background-position: -0%;
+  }
+
+  10% {
+    background-position: -100%;
+  }
+
+  20% {
+    background-position: -100%;
+  }
+
+  100% {
+    background-position: -100%;
+  }
+}
+
+@keyframes smile {
+  from {
+    background-position: 0%;
+  }
+
+  to {
+    background-position: -200%;
+  }
+}
+
+@keyframes un-smile {
+  from {
+    background-position: -400%;
+  }
+
+  to {
+    background-position: -0%;
+  }
+}
+
+@keyframes smile2 {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: -400%;
+  }
+
+  75% {
+    background-position: -400%;
+  }
+
+  100% {
+    background-position: -0%;
+  }
+}
+
+
+
+#bin[data-attention='1'] {
+  z-index: 9;
+  animation: bounce-7 1s cubic-bezier(0.280, 0.840, 0.420, 1), smile .5s steps(4) forwards
+}
+
+
+
+@keyframes bounce-7 {
+  0% {
+    transform: scale(.8, .8) translateY(0);
+  }
+
+  10% {
+    transform: scale(.7, .8) translateY(0);
+  }
+
+  30% {
+    transform: scale(.8, .85) translateY(-20%);
+  }
+
+  50% {
+    transform: scale(.75, .85) translateY(0);
+  }
+
+  57% {
+    transform: scale(.8, .85) translateY(-5%);
+  }
+
+  64% {
+    transform: scale(.8, .8) translateY(0);
+  }
+
+  100% {
+    transform: scale(.8, .8) translateY(0);
+  }
+}
+
+/* --- Shaddows --- */
+
+.shaddow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#bin-shaddow {
+  left: 150%;
+  bottom: -350%;
+  z-index: 1;
+  /* height: 100%; */
+  /* background-color: aqua; */
+}
+
+#bin-shaddow[data-attention='1'] {
+  animation-name: shrink;
+  animation-duration: .2s;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(.85) translateX(-10%);
+  }
+}

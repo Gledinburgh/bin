@@ -9,7 +9,7 @@ export const scrapYardDetails = {
     "img": "./mockup/Eli-color.png",
     "alt": "Image of The Scruffy Old Man (Eli)",
     "title": "The Scruffy Old Man (Eli)",
-    "description": "Always the free spirit, Eli spent his youth traveling the country operating trains of all sizes but really only finding true joy from the thrill of just jumping on a random train car not knowing where it would take him. Throughout his adventures Eli would take on various trades and meet many interesting people, but his favorite hobby was collecting forgotten treasures that most would consider trash. Before he knew it, Eli’s small cabin would become a museum of his travels that hold the memories of days gone."
+    "description": "Always the free spirit, Eli found joy jumping on a random train car not knowing where it would take him. Throughout his adventures Eli would take on various trades and meet many interesting people, but his favorite hobby was collecting forgotten treasures that most would consider trash."
   },
   "BoxCar": {
     "img": "./mockup/Boxcar-color.png",

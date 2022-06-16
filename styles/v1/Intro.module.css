@@ -1,0 +1,12 @@
+.intro {
+  width: 100%;
+  height: 100%;
+  padding: 2vh;
+  text-align: center;
+  vertical-align: center;
+
+}
+
+#into-text {
+  z-index: 2;
+}

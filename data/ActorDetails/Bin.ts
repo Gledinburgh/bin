@@ -11,6 +11,7 @@ export const Bin: actorDetails = {
   "name": "Bin",
   "id": "bin",
   "modal": "park",
+  "audio": "Audio/Bin_Hi_.mp3",
   "imgUrl": "./mockup/bin-empty.png",
   "baseWidth": 461,
   "baseHeight": 266,

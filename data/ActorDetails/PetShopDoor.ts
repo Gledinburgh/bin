@@ -4,6 +4,7 @@ export const PetShopDoor: actorDetails = {
   "name": "PetShopDoor",
   "id": "pet-shop-door",
   "modal": "petShop",
+  "audio": "Audio/Door_open_FX.mp3",
   "imgUrl": "./mockup/door-color.png",
   "baseWidth": 384,
   "baseHeight": 474,
