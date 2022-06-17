@@ -13,6 +13,7 @@ export const Bin: actorDetails = {
   "modal": "park",
   "audio": "Audio/Bin_Hi_.mp3",
   "imgUrl": "./mockup/bin-empty.png",
+  "hoverText": "Bin",
   "baseWidth": 461,
   "baseHeight": 266,
   "shaddow": BinShaddow,

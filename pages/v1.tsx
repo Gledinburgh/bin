@@ -7,7 +7,7 @@ import styles from '../styles/v1/Home.module.css'
 
 import { GeneralContext } from '../Context/GeneralContext'
 import Modal from '../Components/v1/Modal'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Header3 from '../Components/v1/Header3'
 import Nav from '../Components/v1/Nav'
 import Intro from '../Components/v1/Intro'

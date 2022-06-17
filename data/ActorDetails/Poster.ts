@@ -6,6 +6,7 @@ export const Poster: actorDetails = {
   "id": "poster",
   "modal": "carnival",
   "imgUrl": "./mockup/poster-empty.png",
+  "hoverText": "Scrap Carnival",
   "baseWidth": 220,
   "baseHeight": 310,
   "outline": true,

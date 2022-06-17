@@ -5,6 +5,7 @@ export const JunkYardDude: actorDetails = {
   "id": "dude",
   "audio": "Audio/Eli_Hello_GX.mp3",
   "modal": "scrapYard",
+  "hoverText": "Eli",
   "imgUrl": "./mockup/dude-empty.png",
   "baseWidth": 173,
   "baseHeight": 425,

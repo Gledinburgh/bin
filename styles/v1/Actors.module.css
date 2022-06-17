@@ -1,3 +1,19 @@
+.hover-text {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  white-space: nowrap;
+  background-color: rgb(255, 231, 96);
+  padding-left: 10%;
+  padding-right: 10%;
+  border: solid 1px black;
+}
+
+.actor-container:hover .hover-text {
+  visibility: visible;
+}
+
 .actor {
   position: absolute;
 }
@@ -5,25 +21,28 @@
 #dude:hover,
 #poster:hover,
 #pet-shop-door:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+}
 
+#bin:hover {
+  transform: scale(.9)
 }
 
 #pet-shop-door {
-  left: -100%;
-  top: 25%;
+  left: -130%;
+  top: -15%;
 }
 
 #awning {
   pointer-events: none;
   z-index: 10;
-  left: -200%;
+  left: -110%;
   top: 10%;
 }
 
 #poster {
   transform: scale(1);
-  top: 10%;
+  top: 30%;
   left: -50%;
   z-index: 2;
   display: block;
@@ -35,8 +54,6 @@
 #bin {
   transform: scale(.8);
   z-index: 9;
-  top: 100%;
-  left: 60%;
   background-image: url("/mockup/bin-blink-color-sheet.png");
   background-size: 500%;
   display: block;
@@ -77,8 +94,8 @@
   background-image: url("/mockup/dude-breathe-color-sheet.png");
 
   z-index: 10;
-  left: 20%;
-  bottom: -100%;
+  left: 80%;
+  bottom: -120%;
   background-size: 400%;
   display: block;
   background-position: 0 0;
@@ -204,8 +221,8 @@
 }
 
 #bin-shaddow {
-  left: 150%;
-  bottom: -350%;
+  left: 100%;
+  bottom: -260%;
   z-index: 1;
   /* height: 100%; */
   /* background-color: aqua; */

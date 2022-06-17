@@ -6,6 +6,7 @@ export const PetShopDoor: actorDetails = {
   "modal": "petShop",
   "audio": "Audio/Door_open_FX.mp3",
   "imgUrl": "./mockup/door-color.png",
+  "hoverText": "Smitty's Pet Shop",
   "baseWidth": 384,
   "baseHeight": 474,
   "map": {

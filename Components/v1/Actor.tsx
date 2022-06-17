@@ -41,6 +41,7 @@ const Actor = (
       main: <div></div>,
       shaddow: <div></div>,
       outline: <div></div>,
+      hoverText: <span></span>
     };
 
 
@@ -63,7 +64,13 @@ const Actor = (
           data-attention={isAttention}>
           <Image src={imgUrl} width={scale * baseWidth} height={scale * baseHeight} layout="fixed"></Image>
         </div>
+    }
 
+    if (actorDetails.hoverText) {
+      content.hoverText =
+        <span className={styles["hover-text"]}>
+          {actorDetails.hoverText}
+        </span>
     }
 
     return content;
@@ -115,7 +122,7 @@ const Actor = (
   }
 
   return (
-    <div>
+    <div className={styles["actor-container"]}>
       <div
         className={styles.actor}
         id={styles[actorDetails.id]}
@@ -138,6 +145,7 @@ const Actor = (
       </div>
 
       {content.shaddow}
+      {content.hoverText}
 
     </div>
 

@@ -5,6 +5,7 @@ export const Awning: actorDetails = {
   "id": "awning",
   "modal": "",
   "imgUrl": "./mockup/awning-color.png",
+  "hoverText": "",
   "baseWidth": 500,
   "baseHeight": 550,
   "map": {

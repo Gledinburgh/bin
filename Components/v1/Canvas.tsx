@@ -7,10 +7,11 @@ import { Awning } from "../../data/ActorDetails/Awning";
 
 import styles from '../../styles/v1/Canvas.module.css'
 import { actorDetails } from "../../types";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { getScale } from '../../Context/MediaQuery'
 import { map2DArray } from '../../Utility/gridUtility'
+
 
 
 
@@ -19,7 +20,17 @@ const Canvas = (
     { openModal: Function }
 ) => {
 
+  const cropRef: any = useRef(null)
+  const gridRef: any = useRef(null)
+  const [initialPosition, setInitialPosition] = useState(true)
 
+  const scrollTo = () => {
+    let size = gridRef.current.getBoundingClientRect()
+    console.log("size:", size)
+    cropRef.current.scrollLeft += (size.width / 15)
+    cropRef.current.scrollTop += (size.height);
+    setInitialPosition(true)
+  }
 
   //Get's scale based off of media query
   const scale: any = getScale();
@@ -37,21 +48,24 @@ const Canvas = (
 
   const actorCoords: any = {
     // h5: CreateActor(BinShaddow),
-    f4: CreateActor(Bin),
+    g4: CreateActor(Bin),
     e1: CreateActor(Awning),
-    i9: CreateActor(JunkYardDude),
+    h8: CreateActor(JunkYardDude),
     e5: CreateActor(Poster),
-    f1: CreateActor(PetShopDoor),
+    f2: CreateActor(PetShopDoor),
   };
 
   useEffect(() => {
-    console.log("useEffect: Grid")
+    if (initialPosition) {
+      scrollTo();
+    }
+    console.log("useEffect: Canvas")
   }, [scale])
 
   return (
 
-    <div id={styles["crop"]}>
-      <table className={styles["grid-container"]}>
+    <div ref={cropRef} id={styles["crop"]}>
+      <table ref={gridRef} className={styles["grid-container"]}>
 
         {
           letterArray.map((char: string) => {

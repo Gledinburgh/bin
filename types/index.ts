@@ -5,6 +5,7 @@ export interface actorDetails {
   "id": string,
   "modal": string,
   "audio"?: string,
+  "hoverText": string,
   "imgUrl": string,
   "baseWidth": number,
   "baseHeight": number,
