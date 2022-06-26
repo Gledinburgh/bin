@@ -1,10 +1,10 @@
 #scene {
   width: 100%;
-  height: 130%;
+  height: 100%;
   overflow: hidden;
   position: relative;
-  background: rgb(179, 209, 210);
-  background: linear-gradient(180deg, rgba(179, 209, 210, 0) 0%, rgba(179, 209, 210, 0.9466357308584686) 39%, rgba(255, 182, 182, 1) 76%);
+  background: rgb(255, 223, 115);
+  background: linear-gradient(180deg, rgba(255, 223, 115, 0) 0%, rgba(255, 223, 115, 1) 51%, rgba(131, 224, 153, 1) 60%, rgba(131, 224, 153, 1) 100%);
 }
 
 #ground {
@@ -29,6 +29,8 @@
 
 }
 
+#park-A {}
+
 #park-1 {
   padding-top: 5%;
 }
@@ -36,15 +38,15 @@
 #park-2 {
   position: absolute;
 
-  padding-top: 20%
+  padding-top: 15%
 }
 
 #park-3 {
-  padding-top: 50%
+  padding-top: 30%
 }
 
 #park-4 {
-  padding-top: 60%
+  padding-top: 40%
 }
 
 
@@ -67,7 +69,7 @@
 #mariposa {
   transform: rotate(-30deg) !important;
   height: 100%;
-  background-image: url("/mockup/mariposa-sprite.png");
+  background-image: url("/ModalContent/Park/mariposa-sprite.png");
   background-position: 0 0;
   background-size: 400%;
   display: block;

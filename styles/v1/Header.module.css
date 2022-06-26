@@ -9,7 +9,7 @@
 
 #nav {
   /* font-size: 2em; */
-  position: relative;
+  position: z;
   z-index: 2;
   color: #f3a774;
   width: 100%;

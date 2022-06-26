@@ -10,6 +10,7 @@ import Modal from '../Components/v1/Modal'
 import { useState, useEffect, useRef } from 'react'
 import Header3 from '../Components/v1/Header3'
 import Nav from '../Components/v1/Nav'
+import About from '../Components/v1/About'
 import Intro from '../Components/v1/Intro'
 
 
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
 
   const context = GeneralContext();
   const [modalVisability, setModalVisability] = useState(false);
+  const [aboutVisability, setAboutVisability] = useState(false);
   const [activeActor, setActiveActor] = useState('')
 
   const metaInfo = {
@@ -26,8 +28,9 @@ const Home: NextPage = () => {
     "img": "https://bin.lspckspe2i73m.us-east-1.cs.amazonlightsail.com/Bin-face2.png"
   }
 
-  function toggleModalVisability(e: React.SyntheticEvent<HTMLElement>): void {
-    setModalVisability(!modalVisability)
+  function toggleAboutVisability(e: React.SyntheticEvent<HTMLElement>): void {
+    console.log("about visibility fired")
+    setAboutVisability(!aboutVisability)
   }
 
   function closeModal(e: React.SyntheticEvent<HTMLElement>): void {
@@ -97,11 +100,14 @@ const Home: NextPage = () => {
 
           <Col id={styles["interactive-zone"]} >
 
+            <About
+              isVisible={aboutVisability} />
             <div id={styles["stage"]}>
               <Canvas openModal={openModal} />
             </div>
 
-            <Nav />
+            <Nav
+              toggleVisability={toggleAboutVisability} />
           </Col>
         </Row>
 

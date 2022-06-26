@@ -1,5 +1,7 @@
 import { Row, Col } from 'antd'
 import styles from '../../../styles/v1/Park.module.css'
+import modalStyles from '../../../styles/v1/Modal.module.css'
+
 import { SyntheticEvent, useEffect, useRef, useState } from 'react'
 import Parallax from 'parallax-js'
 
@@ -15,11 +17,11 @@ const depths = {
 
   // --- Ground scene --- //
 
-  sun: ".3",
-  treeLine: ".1",
-  playGround: ".3",
-  kids: ".5",
-  tree: "1.5"
+  sun: "1",
+  treeLine: "-.2",
+  playGround: "-1.5",
+  kids: "-2.2",
+  bin: "2"
 
 }
 
@@ -58,13 +60,13 @@ const ParkContent = () => {
   return (
     <Row id={styles["scene"]} justify="center" align="middle">
       <Col ref={skyRef} id={styles["sky-container"]} >
+
+
         <img id={styles["plane"]} src='./mockup/plane.png' />
         <div data-depth={depths.sun}>
 
         </div>
-        <img data-depth={depths.cloud3} className={styles["clouds"]} src='./mockup/cloud-3.png'></img>
-        <img data-depth={depths.cloud2} className={styles["clouds"]} src='./mockup/cloud-2.png'></img>
-        <img data-depth={depths.cloud1} className={styles["clouds"]} src='./mockup/cloud-1.png'></img>
+
 
       </Col >
       <div id={styles["gap"]}>.
@@ -79,6 +81,7 @@ const ParkContent = () => {
 
         <div
           id={styles["mariposa-container"]}
+          data-depth={depths.sun}
           data-fly={fly}
           onAnimationEnd={() => handleAnimationEnd()}
           onClick={handleMariposaClick}
@@ -92,11 +95,12 @@ const ParkContent = () => {
 
 
         <div ref={groundRef} id={styles["park-container"]} >
-          <img data-depth={depths.sun} className={styles["park-scene"]} id={styles["park-0"]} src='./mockup/park-0-color.png' />
-          <img data-depth={depths.treeLine} className={styles["park-scene"]} id={styles["park-1"]} src='./mockup/park-1-color.png' />
-          <img data-depth={depths.playGround} className={styles["park-scene"]} id={styles["park-2"]} src='./mockup/park-2-color.png' />
-          <img data-depth={depths.kids} className={styles["park-scene"]} id={styles["park-3"]} src='./mockup/park-3.png' />
-          <img data-depth={depths.tree} className={styles["park-scene"]} id={styles["park-4"]} src='./mockup/park-4-color.png' />
+          <img data-depth={0} className={styles["park-scene"]} id={styles["park-A"]} src='./ModalContent/Park/park-A-color.png' />
+          <img data-depth={depths.sun} className={styles["park-scene"]} id={styles["park-0"]} src='./ModalContent/Park/park-0-color.png' />
+          <img data-depth={depths.treeLine} className={styles["park-scene"]} id={styles["park-1"]} src='./ModalContent/Park/park-1-color.png' />
+          <img data-depth={depths.playGround} className={styles["park-scene"]} id={styles["park-2"]} src='./ModalContent/Park/park-2-color.png' />
+          <img data-depth={depths.kids} className={styles["park-scene"]} id={styles["park-3"]} src='./ModalContent/Park/park-3.png' />
+          <img data-depth={depths.bin} className={styles["park-scene"]} id={styles["park-4"]} src='./ModalContent/Park/park-4-color.png' />
 
         </div>
       </div>

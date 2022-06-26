@@ -38,7 +38,7 @@ const ScrapyardContent = () => {
 
       <Row  {...RowSettings}>
         <Col {...textColSettings}>
-          <Row justify='center'><b>Eli is a free spirit</b></Row>
+          <Row justify='center'><b>Eli is a free spirit :</b></Row>
           <Row className={styles["modal-text-box-body"]}> {Eli.description} </Row>
         </Col>
         <Col {...imageColSettings}>
@@ -52,7 +52,7 @@ const ScrapyardContent = () => {
           <img className={styles["img"]} src={BoxCar.img} alt={BoxCar.alt}></img>
         </Col>
         <Col {...textColSettings}>
-          <Row justify='center'><b>Eli is Bin's best Freind</b></Row>
+          <Row justify='center'><b>Eli is Bin's best Freind :</b></Row>
           <Row className={styles["modal-text-box-body"]}>Eli now spends his time looking after Bin a making sure he is always taken care of. </Row>
         </Col>
       </Row >
