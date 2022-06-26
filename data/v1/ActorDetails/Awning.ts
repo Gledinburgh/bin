@@ -1,4 +1,4 @@
-import { actorDetails } from "../../types";
+import { actorDetails } from "../../../types";
 
 export const Awning: actorDetails = {
   "name": "awning",

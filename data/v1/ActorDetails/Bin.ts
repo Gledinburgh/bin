@@ -1,4 +1,4 @@
-import { actorDetails } from "../../types";
+import { actorDetails } from "../../../types";
 
 const BinShaddow = {
   "id": "bin-shaddow",

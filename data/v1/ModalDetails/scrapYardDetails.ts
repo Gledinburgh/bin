@@ -9,11 +9,17 @@ export const scrapYardDetails = {
     "img": "./mockup/Eli-color.png",
     "alt": "Image of The Scruffy Old Man (Eli)",
     "title": "The Scruffy Old Man (Eli)",
-    "description": "Always the free spirit, Eli found joy jumping on a random train car not knowing where it would take him. Throughout his adventures Eli would take on various trades and meet many interesting people, but his favorite hobby was collecting forgotten treasures that most would consider trash."
+    "description": "Always the free spirit, Eli found joy jumping on a random train car not knowing where it would take him. His favorite hobby is collecting forgotten treasures that most would consider trash."
   },
   "BoxCar": {
     "img": "./mockup/Boxcar-color.png",
     "alt": "Image of a the bulldog named BoxCar",
+    "title": `Boxcar \"The Pup\"`,
+    "description": "Found as a young pup lost along a railroad track near Boston, the tiny bulldog would join Eli on his travels offering companionship and becoming his lifelong friend."
+  },
+  "friend": {
+    "img": "./ModalContent/ScrapYard/friends.png",
+    "alt": "Image of Eli helping Bin",
     "title": `Boxcar \"The Pup\"`,
     "description": "Found as a young pup lost along a railroad track near Boston, the tiny bulldog would join Eli on his travels offering companionship and becoming his lifelong friend."
   }

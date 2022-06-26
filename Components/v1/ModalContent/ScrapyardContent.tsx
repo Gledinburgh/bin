@@ -1,9 +1,9 @@
 import { Row, Col } from 'antd'
 import styles from '../../../styles/v1/Modal.module.css'
 
-import { scrapYardDetails } from '../../../data/ModalDetails/scrapYardDetails'
+import { scrapYardDetails } from '../../../data/v1/ModalDetails/scrapYardDetails'
 import { BoxPlotFilled } from '@ant-design/icons'
-const { intro, Eli, BoxCar } = scrapYardDetails
+const { intro, Eli, friend } = scrapYardDetails
 
 const RowSettings: any = {
   justify: "space-between",
@@ -49,7 +49,7 @@ const ScrapyardContent = () => {
 
       <Row  {...RowSettings}>
         <Col  {...imageColSettings}>
-          <img className={styles["img"]} src={BoxCar.img} alt={BoxCar.alt}></img>
+          <img style={{ width: "100%" }} className={styles["img"]} src={friend.img} alt={friend.alt}></img>
         </Col>
         <Col {...textColSettings}>
           <Row justify='center'><b>Eli is Bin's best Freind :</b></Row>
