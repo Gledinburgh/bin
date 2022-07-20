@@ -1,9 +1,9 @@
 import Actor from "./Actor";
-import { Bin } from "../../data/ActorDetails/Bin"
-import { JunkYardDude } from "../../data/ActorDetails/JunkYardDude"
-import { PetShopDoor } from "../../data/ActorDetails/PetShopDoor"
-import { Poster } from "../../data/ActorDetails/Poster"
-import { Awning } from "../../data/ActorDetails/Awning";
+import { Bin } from "../../data/v1/ActorDetails/Bin"
+import { JunkYardDude } from "../../data/v1/ActorDetails/JunkYardDude"
+import { PetShopDoor } from "../../data/v1/ActorDetails/PetShopDoor"
+import { Poster } from "../../data/v1/ActorDetails/Poster"
+import { Awning } from "../../data/v1/ActorDetails/Awning";
 
 import styles from '../../styles/v1/Canvas.module.css'
 import { actorDetails } from "../../types";

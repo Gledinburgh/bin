@@ -31,6 +31,8 @@
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  background: rgb(137, 233, 251);
+  background: linear-gradient(180deg, rgba(137, 233, 251, 1) 7%, rgba(220, 191, 255, 1) 54%);
 }
 
 #crop::-webkit-scrollbar {

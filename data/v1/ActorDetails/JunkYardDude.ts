@@ -1,14 +1,22 @@
 import { actorDetails } from "../../../types";
 
+const dudeShaddow = {
+  "id": "dude-shaddow",
+  "imgUrl": "/mockup/bin-shaddow.png",
+  "baseWidth": 346,
+  "baseHeight": 99,
+}
+
 export const JunkYardDude: actorDetails = {
   "name": "JunkYardDude",
   "id": "dude",
   "audio": "Audio/Eli_Hello_GX.mp3",
   "modal": "scrapYard",
   "hoverText": "Eli",
-  "imgUrl": "./mockup/dude-empty.png",
-  "baseWidth": 173,
-  "baseHeight": 425,
+  "shaddow": dudeShaddow,
+  "imgUrl": "./Stage/dude-empty.png",
+  "baseWidth": 286,
+  "baseHeight": 561,
   "map": {
     "name": "dudeMap",
     "areas": [{

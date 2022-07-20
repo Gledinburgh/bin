@@ -6,7 +6,7 @@ export const scrapYardDetails = {
     "description": "What started off as a stopping point for Eli between his curious vagabond travels throughout the country, a small single room cabin turned into a sprawling landscape composed of unique and forgotten items he would collect along the way. This scrap emporium would become a favorite sourcing location for The Major’s Traveling Scrap Carnival."
   },
   "Eli": {
-    "img": "./mockup/Eli-color.png",
+    "img": "./ModalContent//ScrapYard/dude3.png",
     "alt": "Image of The Scruffy Old Man (Eli)",
     "title": "The Scruffy Old Man (Eli)",
     "description": "Always the free spirit, Eli found joy jumping on a random train car not knowing where it would take him. His favorite hobby is collecting forgotten treasures that most would consider trash."

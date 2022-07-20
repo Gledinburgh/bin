@@ -5,10 +5,10 @@ export const Poster: actorDetails = {
   "name": "Poster",
   "id": "poster",
   "modal": "carnival",
-  "imgUrl": "./mockup/poster-empty.png",
+  "imgUrl": "./Stage/poster-empty.png",
   "hoverText": "Scrap Carnival",
-  "baseWidth": 220,
-  "baseHeight": 310,
+  "baseWidth": 240,
+  "baseHeight": 360,
   "outline": true,
   shaddow: null,
   "map": {

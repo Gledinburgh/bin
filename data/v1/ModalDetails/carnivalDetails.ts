@@ -36,7 +36,7 @@ export const CarnivalDetails = {
     "description": "The traveling scrap carnival provides a home to lost and forgotten things. "
   },
   "carnivalAtractions2": {
-    "img": "./ModalContent/Carnival/Carnival_Atraction2.png",
+    "img": "./ModalContent/Carnival/Carnival_Atraction3.png",
     "alt": "image Scrap carnival atractions",
     "title": "Carousel",
     "description": "What most would find useless, the scrap carnival breaths new life into, and shows the world they are still useful and worthy of love. "

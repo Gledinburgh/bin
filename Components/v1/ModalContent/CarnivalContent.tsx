@@ -46,6 +46,7 @@ const CarnivalContent = () => {
 
 
       <Row  {...RowSettings}>
+        {/* <div className={styles["column-back"]}></div> */}
         <Col {...textColSettings}>
           <Row justify='center'><b>Bin's Future home :</b></Row>
           <Row className={styles["modal-text-box-body"]}> {carnivalAtractions.description}</Row>
@@ -57,8 +58,8 @@ const CarnivalContent = () => {
       </Row >
 
       <Row  {...RowSettings}>
-        <Col id={carnivalStyle["atractions2"]} {...imageColSettings}>
-          <img className={styles["img"]} src={carnivalAtractions2.img} alt={carnivalAtractions2.alt}></img>
+        <Col  {...imageColSettings}>
+          <img style={{ width: "100%" }} src={carnivalAtractions2.img} alt={carnivalAtractions2.alt}></img>
         </Col>
         <Col {...textColSettings}>
           <Row justify='center'><b>A Welcoming place :</b></Row>

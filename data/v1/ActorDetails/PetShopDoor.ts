@@ -5,10 +5,12 @@ export const PetShopDoor: actorDetails = {
   "id": "pet-shop-door",
   "modal": "petShop",
   "audio": "Audio/Door_open_FX.mp3",
-  "imgUrl": "./mockup/door-color.png",
+  "imgUrl": "./Stage/door-empty.png",
   "hoverText": "Smitty's Pet Shop",
-  "baseWidth": 384,
-  "baseHeight": 474,
+  "baseWidth": 450,
+  "baseHeight": 550,
+  "outline": false,
+
   "map": {
     "name": "doorMap",
     "areas": [{

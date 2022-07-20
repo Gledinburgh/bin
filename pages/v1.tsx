@@ -84,7 +84,7 @@ const Home: NextPage = () => {
         <Row id={styles["header"]} justify='center'>
           <Image
             id={styles["header-img"]}
-            src="/Background/dumpster-texture.jpg"
+            src="/Background/dumpster-texture1.1.jpg"
             alt="Decorative"
             layout="fill"
             objectFit='cover'

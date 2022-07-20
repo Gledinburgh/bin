@@ -1,3 +1,9 @@
+.actor {
+  position: absolute;
+}
+
+/*  --- Hover --- */
+
 .hover-text {
   visibility: hidden;
   position: absolute;
@@ -14,24 +20,71 @@
   visibility: visible;
 }
 
-.actor {
-  position: absolute;
+
+
+#pet-shop-door:hover {
+  transform: scale(1.15);
 }
 
 #dude:hover,
-#poster:hover,
-#pet-shop-door:hover {
-  transform: scale(1.1);
+#poster:hover {
+  transform: scale(1)
 }
 
 #bin:hover {
   transform: scale(.9)
 }
 
+
+/*  --- Door --- */
+
 #pet-shop-door {
   left: -130%;
-  top: -15%;
+  top: -50%;
+  transform: rotate(-5deg);
+
+  background-image: url("/Stage/door-spritesheet.png");
+  background-repeat: no-repeat;
+  display: block;
+  background-size: 1100%;
+  background-position: 0px 0px;
+
+  animation: door-idle;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-timing-function: steps(5);
+  animation-iteration-count: infinite;
+
 }
+
+#pet-shop-door[data-attention='1'] {
+  animation: door-open;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-timing-function: steps(11);
+  animation-iteration-count: 1;
+}
+
+@keyframes door-idle {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: 50% 0
+  }
+}
+
+@keyframes door-open {
+  from {
+    background-position: 0% 100%;
+  }
+
+  to {
+    background-position: 110% 100%
+  }
+}
+
 
 #awning {
   pointer-events: none;
@@ -40,16 +93,58 @@
   top: 10%;
 }
 
+/*  --- Poster --- */
+
 #poster {
-  transform: scale(1);
+  transform: scale(.8);
   top: 30%;
   left: -50%;
   z-index: 2;
+
+  background-repeat: no-repeat;
   display: block;
-  background-position: 0 0;
-  background-size: 100%;
-  background-image: url("/mockup/poster-color2.png");
+  background-size: 1500%;
+  background-position: 0px 0px;
+  background-image: url("/Stage/poster-spritesheet.png");
+
+  animation: poster-idle;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-timing-function: steps(5);
+  animation-iteration-count: infinite;
 }
+
+#poster[data-attention='1'] {
+  animation: poster-open;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-timing-function: steps(15);
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes poster-idle {
+  from {
+    background-position: 0% 100%
+  }
+
+  to {
+    background-position: 35.7% 100%
+  }
+}
+
+@keyframes poster-open {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: 107.15% 0%
+  }
+}
+
+
+/*  --- Bin --- */
 
 #bin {
   transform: scale(.8);
@@ -69,10 +164,12 @@
   background-image: url("/mockup/bin-wobble.png");
 }
 
-#poster-wobble {
-  background-image: url("/mockup/poster-wobble-sheet.png");
 
+#bin[data-attention='1'] {
+  z-index: 9;
+  animation: bounce-7 1s cubic-bezier(0.280, 0.840, 0.420, 1), smile .5s steps(4) forwards
 }
+
 
 .outline-wobble {
   background-size: 500%;
@@ -88,24 +185,58 @@
   animation-iteration-count: infinite;
 }
 
+/* --- Eli / Dude --- */
+
 #dude {
 
-  transform: scale(1);
-  background-image: url("/mockup/dude-breathe-color-sheet.png");
-
+  transform: scale(.9);
+  background-image: url("/Stage/Eli-sheet.png");
+  background-repeat: no-repeat;
   z-index: 10;
-  left: 80%;
+  left: 40%;
   bottom: -120%;
-  background-size: 400%;
+  background-size: 1300%;
   display: block;
   background-position: 0 0;
 
-  animation: sprite;
-  animation-duration: 4s;
-  animation-direction: alternate;
-  animation-timing-function: steps(3);
+  animation: eli-idle;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-timing-function: steps(6);
   animation-iteration-count: infinite;
 }
+
+#dude[data-attention='1'] {
+  animation: eli-wave;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-timing-function: steps(13);
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+}
+
+@keyframes eli-idle {
+  from {
+    background-position: 0% 100%
+  }
+
+  to {
+    background-position: 50% 100%
+  }
+}
+
+@keyframes eli-wave {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: 108.4% 0%
+  }
+}
+
+
+
 
 @keyframes wobble {
   from {
@@ -175,11 +306,6 @@
 
 
 
-#bin[data-attention='1'] {
-  z-index: 9;
-  animation: bounce-7 1s cubic-bezier(0.280, 0.840, 0.420, 1), smile .5s steps(4) forwards
-}
-
 
 
 @keyframes bounce-7 {
@@ -228,6 +354,21 @@
   /* background-color: aqua; */
 }
 
+#dude-shaddow {
+  top: 130%;
+  left: 60%;
+  position: absolute;
+  transform: scale(70%, 100%);
+}
+
+#dude-shaddow[data-attention='1'] {
+  animation-name: wave;
+  animation-duration: .4s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: 4;
+}
+
 #bin-shaddow[data-attention='1'] {
   animation-name: shrink;
   animation-duration: .2s;
@@ -243,5 +384,15 @@
 
   to {
     transform: scale(.85) translateX(-10%);
+  }
+}
+
+@keyframes wave {
+  from {
+    transform: scale(70%, 100%)
+  }
+
+  to {
+    transform: scale(73%, 99%)
   }
 }
