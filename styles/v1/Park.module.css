@@ -4,7 +4,8 @@
   overflow: hidden;
   position: relative;
   background: rgb(255, 223, 115);
-  background: linear-gradient(180deg, rgba(255, 223, 115, 0) 0%, rgba(255, 223, 115, 1) 51%, rgba(131, 224, 153, 1) 60%, rgba(131, 224, 153, 1) 100%);
+  background: linear-gradient(180deg, rgba(255, 223, 115, 0) 0%, rgba(255, 223, 115, 1) 51%, rgba(131, 224, 153, 1) 80%, rgb(185, 250, 200) 100%);
+
 }
 
 #ground {
@@ -29,24 +30,43 @@
 
 }
 
-#park-A {}
+#park-A {
+  z-index: 1;
+}
+
+#park-B {
+  z-index: 11;
+  top: -40%;
+}
+
+#park-0 {
+  z-index: 0;
+}
+
 
 #park-1 {
   padding-top: 5%;
+  z-index: 2;
 }
 
 #park-2 {
   position: absolute;
 
-  padding-top: 15%
+  padding-top: 15%;
+  z-index: 3;
+
 }
 
 #park-3 {
-  padding-top: 30%
+  padding-top: 30%;
+  z-index: 4;
+
 }
 
 #park-4 {
-  padding-top: 40%
+  padding-top: 40%;
+  z-index: 5;
+
 }
 
 

@@ -63,8 +63,8 @@ const ParkContent = () => {
 
 
         <img id={styles["plane"]} src='./mockup/plane.png' />
-        <div data-depth={depths.sun}>
 
+        <div data-depth={depths.sun}>
         </div>
 
 
@@ -77,6 +77,7 @@ const ParkContent = () => {
 
 
       <div id={styles["ground"]}>
+        <img data-depth={0} className={styles["park-scene"]} id={styles["park-B"]} src='./ModalContent/Park/park-B-color.png' />
 
 
         <div

@@ -106,8 +106,8 @@ const Home: NextPage = () => {
               <Canvas openModal={openModal} />
             </div>
 
-            <Nav
-              toggleVisability={toggleAboutVisability} />
+            {/* <Nav
+              toggleVisability={toggleAboutVisability} /> */}
           </Col>
         </Row>
 

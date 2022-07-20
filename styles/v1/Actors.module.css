@@ -26,11 +26,12 @@
   transform: scale(1.15);
 }
 
-#dude:hover,
+
 #poster:hover {
   transform: scale(1)
 }
 
+#dude:hover,
 #bin:hover {
   transform: scale(.9)
 }
@@ -189,7 +190,7 @@
 
 #dude {
 
-  transform: scale(.9);
+  transform: scale(.8);
   background-image: url("/Stage/Eli-sheet.png");
   background-repeat: no-repeat;
   z-index: 10;
